@@ -16,7 +16,6 @@ Feedback.destroy_all
 Post.destroy_all
 User.destroy_all
 
-Feedback.destroy_all
 
 puts "creating user"
 
