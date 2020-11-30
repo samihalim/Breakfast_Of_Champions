@@ -52,4 +52,3 @@ ActiveRecord::Schema.define(version: 2020_11_30_142959) do
   add_foreign_key "feedbacks", "users"
   add_foreign_key "posts", "users"
 end
-
