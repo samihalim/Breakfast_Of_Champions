@@ -28,6 +28,12 @@ gem 'redis', '~> 4.0'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+# hide env
+gem 'dotenv-rails', groups: [:development, :test]
+
+#cloudindary
+gem 'cloudinary', '~> 1.16.0'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
