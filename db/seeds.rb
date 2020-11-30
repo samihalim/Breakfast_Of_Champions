@@ -20,6 +20,7 @@ User.create(first_name: 'Sam', last_name: 'Bam', user_name: 'Sam Bam', email: 'b
   post.description = Faker::Quote.famous_last_words
 
   post.user = User.all.sample
+  post.save!
 end
 
 puts "#{Post.count} Posts created"
