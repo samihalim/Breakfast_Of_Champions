@@ -16,6 +16,8 @@ Feedback.destroy_all
 Post.destroy_all
 User.destroy_all
 
+Feedback.destroy_all
+
 puts "creating user"
 
 User.create(first_name: 'John', last_name: 'Smith', user_name: 'John Smith', email: 'a@a.com', password: '654321')
@@ -31,6 +33,7 @@ puts "creating post and feedback"
   )
 
   1.times do
+
     feedback = Feedback.create(
       user: User.last,
       description: Faker::Quote.famous_last_words,

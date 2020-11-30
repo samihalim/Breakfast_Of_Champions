@@ -3,9 +3,11 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @feedbacks = Feedback.all
   end
 
   def show
+
   end
 
   def new
