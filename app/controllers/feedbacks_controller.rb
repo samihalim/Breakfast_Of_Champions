@@ -2,8 +2,12 @@ class FeedbacksController < ApplicationController
   before_action :set_feedback, only: [:new, :create, :show]
   skip_before_action :authenticate_user!, only: [:show]
 
-  def show
+  def index
+  end
 
+
+  def show
+    @feedbacks = Feedback.all
   end
 
   def new
