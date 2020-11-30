@@ -1,0 +1,31 @@
+.banner {
+  background-position: center;
+  margin: 10px 10px 10px 10px;
+  padding: 150px 0;
+  border-radius: 20px;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .9;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.banner .btn-flat {
+  color: white;
+  border-color: white;
+  border-radius: 10px;
+}
+
+.image-banner {
+  float: right;
+}
