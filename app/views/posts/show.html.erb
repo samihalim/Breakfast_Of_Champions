@@ -1,2 +1,10 @@
 <h2><%= @post.title %></h2>
 <h3><%= @post.description %></h3>
+
+
+
+
+<h2><% @post.feedbacks.each do |feedback| %></h2>
+<%= feedback.description %>
+<% end %>
+

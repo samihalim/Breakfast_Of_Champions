@@ -11,6 +11,7 @@ require "open-uri"
 
 Post.destroy_all
 User.destroy_all
+Feedback.destroy_all
 User.create(first_name: 'John', last_name: 'Smith', user_name: 'John Smith', email: 'a@a.com', password: '654321')
 User.create(first_name: 'Sam', last_name: 'Bam', user_name: 'Sam Bam', email: 'bb@a.com', password: '65432134')
 
@@ -25,6 +26,7 @@ User.create(first_name: 'Sam', last_name: 'Bam', user_name: 'Sam Bam', email: 'b
   feedback = Feedback.new
   feedback.user = User.last
   feedback.post = post
+  feedback.description = Faker::Quote.famous_last_words
   feedback.save!
 end
 end

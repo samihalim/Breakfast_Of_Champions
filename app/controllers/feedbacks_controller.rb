@@ -1,8 +1,9 @@
 class FeedbacksController < ApplicationController
-  before_action :set_feedback, only: [:new, :create]
+  before_action :set_feedback, only: [:new, :create, :show]
   skip_before_action :authenticate_user!, only: [:show]
 
   def show
+
   end
 
   def new
@@ -22,6 +23,7 @@ class FeedbacksController < ApplicationController
     else
       render :new
     end
+  end
 
   def update
     if @feedback.update(feedback_params)
