@@ -18,11 +18,20 @@ User.create(first_name: 'Sam', last_name: 'Bam', user_name: 'Sam Bam', email: 'b
   post = Post.new
   post.title = Faker::Company.catch_phrase
   post.description = Faker::Quote.famous_last_words
-
   post.user = User.all.sample
   post.save!
+
+  1.times do
+  feedback = Feedback.new
+  feedback.user = User.last
+  feedback.post = post
+  feedback.save!
 end
+end
+
+
 
 puts "#{Post.count} Posts created"
 puts "#{User.count} Users created"
+puts "#{Feedback.count} Feedback created"
 
