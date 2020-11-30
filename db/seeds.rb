@@ -9,29 +9,42 @@
 require 'faker'
 require "open-uri"
 
+puts "start time is #{Time.now}"
+puts "----------------------------------"
+
+Feedback.destroy_all
 Post.destroy_all
 User.destroy_all
+
+puts "creating user"
+
 User.create(first_name: 'John', last_name: 'Smith', user_name: 'John Smith', email: 'a@a.com', password: '654321')
 User.create(first_name: 'Sam', last_name: 'Bam', user_name: 'Sam Bam', email: 'bb@a.com', password: '65432134')
 
+puts "creating post and feedback"
+
 10.times do
-  post = Post.new
-  post.title = Faker::Company.catch_phrase
-  post.description = Faker::Quote.famous_last_words
-  post.user = User.all.sample
-  post.save!
+  post = Post.create(
+    title: Faker::Company.catch_phrase,
+    description: Faker::Quote.famous_last_words,
+    user: User.all.sample
+  )
 
   1.times do
-  feedback = Feedback.new
-  feedback.user = User.last
-  feedback.post = post
-  feedback.save!
+    feedback = Feedback.create(
+      user: User.last,
+      description: Faker::Quote.famous_last_words,
+      post: post
+      )
 end
 end
 
 
-
+puts "----------------------------------"
 puts "#{Post.count} Posts created"
 puts "#{User.count} Users created"
 puts "#{Feedback.count} Feedback created"
+puts "----------------------------------"
+
+puts "end time is #{Time.now}"
 
