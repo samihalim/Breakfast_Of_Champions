@@ -1,17 +1,19 @@
-<div class="row">
-  <div class="col-8">
-    <ul>
-
-<% @posts.each do |post| %>
-<% post.photos.each do |photo| %>
-  <%= cl_image_tag "#{photo.key}.jpg", height: 300, width: 400, crop: :fill %>
-<% end %>
-<li><%= post.title %></li>
-<li><%= post.description %></li>
-<li><% post.categories.each do |category| %></li>
-<%= category.name %>
-<% end %>
-<% end %>
-</ul>
-    </div>
+<div class="most-commented">
+<h5>Most commented...</h5>
+</div>
+<div class="cards">
+  <% @posts.each do |post| %>
+  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://source.unsplash.com/random)">
+    <ul style="list-style-type: none;">
+      <% post.photos.each do |photo| %>
+      <%= cl_image_tag "#{photo.key}.jpg", height: 300, width: 400, crop: :fill %>
+      <% end %>
+      <li> <h2> <%= post.title %> </h2></li>
+      <li><%= post.description %></li>
+      <% post.categories.each do |category| %>
+      <li><%= category.name %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
 </div>
