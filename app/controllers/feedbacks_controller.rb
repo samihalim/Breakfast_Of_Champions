@@ -1,5 +1,5 @@
 class FeedbacksController < ApplicationController
-  before_action :set_feedback, only: [:new, :create, :show]
+  before_action :set_feedback, only: [:new, :show]
   skip_before_action :authenticate_user!, only: [:show]
 
   def index
@@ -17,12 +17,13 @@ class FeedbacksController < ApplicationController
   end
 
   def create
+    @post = Post.find(params[:post_id])
     @feedback = Feedback.new(feedback_params)
     @feedback.post = @post
     @feedback.user = current_user
 
     if @feedback.save!
-      redirect_to @post, notice: 'A feedback was successfully created.'
+      redirect_to post_path(@post), notice: 'A feedback was successfully created.'
 
     else
       render :new
@@ -41,7 +42,7 @@ class FeedbacksController < ApplicationController
   private
 
   def set_feedback
-    @feedback = Feedback.find(params[:post_id])
+    @feedback = Feedback.find(params[:id])
   end
 
   def feedback_params
