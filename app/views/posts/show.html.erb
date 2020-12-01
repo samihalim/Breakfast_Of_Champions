@@ -30,8 +30,8 @@
 
 
 
-<% @post.feedbacks.each do |feedback| %>
-  <%= render partial: "posts/post", locals: { feedback: feedback } %>
+<% @post.feedbacks.where(feedback_id: nil).each do |feedback| %>
+  <%= render partial: "posts/post", locals: { feedback: feedback, level: 0 } %>
 <% end %>
 
 
