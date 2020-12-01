@@ -1,12 +1,12 @@
 <div class="container-fluid">
   <div class="user-avatar-container">
     <% if @user.photo.attached? %>
-      <%= cl_image_tag @user.photo.key, height: 90, width: 90, crop: :fill, class: "rounded-circle", alt: "avatar-large" %>
+    <%= cl_image_tag @user.photo.key, height: 90, width: 90, crop: :fill, class: "rounded-circle", alt: "avatar-large" %>
     <% else %>
-      <div class="initials-avatar">
-        <div class="initials"><%= current_user.email[0..1].upcase %></div>
-      </div>
-      <%#= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
+    <div class="initials-avatar">
+      <div class="initials"><%= current_user.email[0..1].upcase %></div>
+    </div>
+    <%#= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
     <% end %>
     <!-- need to add user_name to sign up page to display username on the user show page -->
     <!-- change current_user.email to: current_user.user_name -->
@@ -28,20 +28,30 @@
         <li>Firstname: <%= current_user.first_name %> </li>
         <li>Lastname: <%= current_user.last_name %> </li>
       </ul>
-      </div>
-      <div id="posts" class="tab-pane fade">
-        <div class="card-container-posts">
-          <% current_user.posts.each do |post| %>
-            <div class="card-body">
-              <h4> Title: <%= post.title %> </h4>
-              <p> Description: <%= post.description %> </p>
-            </div>
-          <% end %>
+    </div>
+    <div id="posts" class="tab-pane fade">
+      <div class="cards">
+        <% current_user.posts.each do |post| %>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://source.unsplash.com/random)">
+          <ul style="list-style-type: none;">
+            <% post.photos.each do |photo| %>
+            <%= cl_image_tag "#{photo.key}.jpg", height: 300, width: 400, crop: :fill %>
+            <% end %>
+            <li> <h2> <%= post.title %> </h2></li>
+            <li><%= post.description %></li>
+            <% post.categories.each do |category| %>
+            <li><%= category.name %></li>
+            <% end %>
+          </ul>
         </div>
+        <% end %>
       </div>
     </div>
   </div>
+
 </div>
+</div>
+
 
 
 
