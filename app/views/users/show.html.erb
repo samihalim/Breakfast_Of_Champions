@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <div>
+    <% if @user.photo.attached? %>
+    <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill %>
+    <% else %>
+     <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
+    <% end %>
+
+  </div>
+</div>
+
+
+
+
+
+
+<h1>hello <%= current_user.user_name %> </h1>
