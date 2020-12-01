@@ -1,9 +1,12 @@
 <div class="container-fluid">
   <div class="user-avatar-container">
     <% if @user.photo.attached? %>
-    <%= cl_image_tag @user.photo.key, height: 90, width: 90, crop: :fill, class: "rounded-circle", alt: "avatar-large" %>
+      <%= cl_image_tag @user.photo.key, height: 90, width: 90, crop: :fill, class: "rounded-circle", alt: "avatar-large" %>
     <% else %>
-    <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
+      <div class="initials-avatar">
+        <div class="initials"><%= current_user.email[0..1].upcase %></div>
+      </div>
+      <%#= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
     <% end %>
     <!-- need to add user_name to sign up page to display username on the user show page -->
     <!-- change current_user.email to: current_user.user_name -->
