@@ -2,6 +2,16 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
+    if params[:query].present?
+      @posts = Post.all
+      sql_query = " \
+        posts.category ILIKE :query \
+      "
+      @categories = Post.joins(:category).where(sql_query, query: "%#{params[:query]}%" )
+    else
+      @categories = Category.all
+    end
+
     @posts = Post.all
     @feedbacks = Feedback.all
   end
