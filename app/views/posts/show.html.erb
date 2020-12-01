@@ -5,6 +5,16 @@
   <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
 <% end %>
 
+
+
+
+
+ <h1>Add your feedback</h1>
+        <%= simple_form_for [@post, @feedback] do |f| %>
+        <%= f.input :description %>
+        <%= f.button :submit, class: 'btn btn-success' %>
+        <% end %>
+
   <% @post.feedbacks.each do |feedback| %>
   <h2> Feedback: <%= feedback.description %></h2>
   <% end %></>
