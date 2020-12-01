@@ -1,12 +1,11 @@
-.login-container {
+.signup-container {
   background: white;
-  height: 500px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.login-cards {
+.signup-cards {
   padding-top: 20px;
   margin-left: 500px;
   display: grid;
@@ -14,7 +13,11 @@
   grid-gap: 10px;
 }
 
-.login-logo {
+.sign-up-font {
+  font-size: 10px;
+}
+
+.signup-logo {
   width: 500px;
   color: white;
   font-size: 25px;
@@ -22,16 +25,16 @@
   justify-content: center;
   display: flex;
   align-items: center;
-  .logo-login {
+  .logo-signup {
     border-radius: 20%;
   }
 }
 
-.login-form {
+.signup-form {
   width: 500px;
   border: 1px solid rgba(0,0,0,0.2);
   background: white;
-  height: 70vh;
+  height: 100vh;
   border-radius: 10px;
   padding: 50px;
   box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
@@ -41,8 +44,9 @@
       background-color: #e09600;
     }
   }
-  .login-shared-links {
-    margin-top: 50px;
+
+  .signup-shared-links {
+    margin-top: 40px;
     a{
       padding: 10px;
       background: #FFAC00;
@@ -58,35 +62,35 @@
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
-  .login-cards {
+  .signup-cards {
     grid-template-columns: 1fr;
   }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  .login-cards {
+  .signup-cards {
     grid-template-columns: 1fr;
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .login-cards {
+  .signup-cards {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .login-cards {
+  .signup-cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  .login-cards {
+  .signup-cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
