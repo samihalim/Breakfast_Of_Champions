@@ -2,9 +2,19 @@
 <h3><%= @post.description %></h3>
 
 <% @post.photos.each do |photo| %>
-  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <%= cl_image_tag "#{photo.key}.jpg", height: 300, width: 400, crop: :fill %>
 <% end %>
 
-  <% @post.feedbacks.each do |feedback| %>
-  <h2> Feedback: <%= feedback.description %></h2>
-  <% end %></>
+<li><% @post.categories.each do |category| %></li>
+<%= category.name %>
+<% end %>
+
+
+
+
+
+
+
+<% @post.feedbacks.each do |feedback| %>
+<h2><%= feedback.description %></h2>
+<% end %>
