@@ -29,10 +29,10 @@
       <div id="posts" class="tab-pane fade">
         <div class="card-container-posts">
           <% current_user.posts.each do |post| %>
-            <ul>
-              <li> <%= post.title %> </li>
-              <li> <%= post.description %> </li>
-            </ul>
+            <div class="card-body">
+              <h4> Title: <%= post.title %> </h4>
+              <p> Description: <%= post.description %> </p>
+            </div>
           <% end %>
         </div>
       </div>
