@@ -1,0 +1,7 @@
+ <h1>Create a new post</h1>
+        <%= simple_form_for @post do |f| %>
+        <%= f.input :title %>
+        <%= f.input :description %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.button :submit, class: 'btn btn-success' %>
+        <% end %>
