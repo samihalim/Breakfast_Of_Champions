@@ -6,6 +6,4 @@ Rails.application.routes.draw do
   resources :posts do
     resources :feedbacks, only: [:create, :edit, :update, :show]
   end
-
-
 end
