@@ -1,40 +1,43 @@
 <div class="container-fluid">
   <div class="user-avatar-container">
     <% if @user.photo.attached? %>
-      <%= cl_image_tag @user.photo.key, height: 90, width: 90, crop: :fill, class: "rounded-circle", alt: "avatar-large" %>
+    <%= cl_image_tag @user.photo.key, height: 90, width: 90, crop: :fill, class: "rounded-circle", alt: "avatar-large" %>
     <% else %>
-     <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
+    <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
     <% end %>
     <!-- need to add user_name to sign up page to display username on the user show page -->
     <!-- change current_user.email to: current_user.user_name -->
-    <h3 class="username-info"> <%= current_user.email %> </h3>
+    <h4 class="username-info"> <%= current_user.email %> </h4>
   </div>
 
-  <!-- Tab links -->
-  <div class="tabs-underlined">
-    <button id="tab-about" class="tablinks" onclick="openTab(event, 'About')">About me</button>
-    <button id="tab-posts" class="tablinks" onclick="openTab(event, 'Posts')">Posts</button>
-  </div>
-
-  <!-- Tab content -->
-  <div id="About" class="tabcontent-initial tabcontent">
-    <!-- need to make list dynamic -->
-    <ul>
-      <li>first name</li>
-      <li>last name</li>
-      <li>level</li>
+  <div class="tab-container">
+    <!-- Tab links -->
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#about">About me</a></li>
+      <li><a data-toggle="tab" href="#posts">Posts</a></li>
     </ul>
+
+    <!-- Tab content for About me -->
+    <div class="tab-content">
+      <div id="about" class="tab-pane fade in active">
+       <ul>
+        <!-- make the list dynamic for each user -->
+        <li>firstname</li>
+        <li>lastname</li>
+      </ul>
+      </div>
+      <div id="posts" class="tab-pane fade">
+        <div class="card-container-posts">
+          <% current_user.posts.each do |post| %>
+            <ul>
+              <li> <%= post.title %> </li>
+              <li> <%= post.description %> </li>
+            </ul>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
-
-
-
-
-
-
-
-
-
-
 </div>
 
 

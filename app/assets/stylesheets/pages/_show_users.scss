@@ -1,9 +1,13 @@
 .user-avatar-container {
-  background-color: green;
   margin-top: 50px;
   padding: 20px 50px;
+  display: flex;
 }
 
 .username-info {
   padding-top: 20px;
+}
+
+.tab-container {
+  padding: 20px 50px;
 }
