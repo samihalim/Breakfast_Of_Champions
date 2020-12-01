@@ -5,6 +5,10 @@
   <%= cl_image_tag "#{photo.key}.jpg", height: 300, width: 400, crop: :fill %>
 <% end %>
 
+<button class="btn btn-success"> <%= link_to "Edit a post", edit_post_path %></button>
+          <%= link_to post_path(@post), method: :delete, data: { confirm: "Are you sure?" } do %>
+            <i class="fas fa-trash-alt" id="cards"></i>
+          <% end %>
 
 <li><% @post.categories.each do |category| %></li>
 <%= category.name %>
