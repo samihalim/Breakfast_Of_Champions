@@ -39,7 +39,7 @@ puts "creating post and feedback"
     title: Faker::Company.catch_phrase,
     description: Faker::Quote.famous_last_words,
     user: User.all.sample,
-  )
+    )
 
   1.times do
 
