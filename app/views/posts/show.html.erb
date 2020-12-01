@@ -5,16 +5,6 @@
   <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
 <% end %>
 
-
-
-
-
-
-
-
-
-
-<% @post.feedbacks.each do |feedback| %>
-<h2><%= feedback.description %></h2>
-<% end %>
-
+  <% @post.feedbacks.each do |feedback| %>
+  <h2> Feedback: <%= feedback.description %></h2>
+  <% end %></>

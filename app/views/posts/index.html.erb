@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-8">
+    <% @posts.each do |post| %>
+    <%= link_to post_path(post) do%>
+    <div class="card-product">
+      <div class="card-product-infos">
+        <h3 class="card-product-title"><%= post.description %></h3>
+        <br>
+        </div>
+      </div>
+
+      <% end %>
+      <% end %>
+    </div>
+</div>
