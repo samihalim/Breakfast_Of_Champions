@@ -1,4 +1,44 @@
 // Specific CSS for your home-page
-body {
-  background-color: white;
+.get-started {
+  margin: 20px;
+  border-radius: 20px;
+  padding: 10px 10px 1000px 10px;
 }
+
+.get-started h1 {
+  margin: 30;
+  padding: 120px 20px 20px 20px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.get-started p {
+  margin: 30;
+  padding: 20px 20px 20px 20px;
+  font-size: 20px;
+  color: white;
+  opacity: .9;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.get-started a {
+  padding: 24px;
+  margin: 10px 100px 100px 100px;
+}
+
+.get-started .btn-flat {
+  color: white;
+  border-color: white;
+  border-radius: 10px;
+}
+
+.image-get-started {
+  float: right;
+}
+
+.image-get-started:hover {
+opacity: 0.4;
+}
+
