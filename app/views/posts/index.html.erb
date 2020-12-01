@@ -3,7 +3,9 @@
 </div>
 <div class="cards">
   <% @posts.each do |post| %>
-  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://source.unsplash.com/random)">
+  <%= link_to post_path(post), class:"no-hover-link" do %>
+  <div class="card">
+  <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://source.unsplash.com/random)">
     <ul style="list-style-type: none;">
       <% post.photos.each do |photo| %>
       <%= cl_image_tag "#{photo.key}.jpg", height: 300, width: 400, crop: :fill %>
@@ -15,5 +17,16 @@
       <% end %>
     </ul>
   </div>
+
+  <div class="card-infos">
+    <div class="row">
+      <div class="col-8"> <%= post.user.user_name %>
+      </div>
+      <div class="col-4">right</div>
+     </div>
+  </div>
+  </div>
+  <% end %>
   <% end %>
 </div>
+

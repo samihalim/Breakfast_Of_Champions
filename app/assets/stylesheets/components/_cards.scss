@@ -39,7 +39,7 @@
   }
 }
 
-.card {
+.card-picture {
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -61,4 +61,14 @@
 
 .cards li {
   font-family: "Nunito", "Helvetica", "sans-serif";
+}
+
+.no-hover-link {
+  color: black;
+}
+
+.no-hover-link:hover {
+  text-decoration: none;
+  text-opacity: 0.5;
+  color: black;
 }
