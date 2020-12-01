@@ -1,4 +1,6 @@
-<ul>
+<div class="row">
+  <div class="col-8">
+    <ul>
 <% @posts.each do |post| %>
 <% post.photos.each do |photo| %>
   <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
@@ -10,5 +12,5 @@
 <% end %>
 <% end %>
 </ul>
-
-
+    </div>
+</div>
