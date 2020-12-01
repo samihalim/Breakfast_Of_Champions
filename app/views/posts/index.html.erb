@@ -1,0 +1,14 @@
+<ul>
+<% @posts.each do |post| %>
+<% post.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
+<li><%= post.title %></li>
+<li><%= post.description %></li>
+<li><% post.categories.each do |category| %></li>
+<%= category.name %>
+<% end %>
+<% end %>
+</ul>
+
+
