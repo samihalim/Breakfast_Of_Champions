@@ -3,17 +3,11 @@ class PostsController < ApplicationController
 
   def index
     if params[:query].present?
-      @posts = Post.all
-      sql_query = " \
-        posts.category ILIKE :query \
-      "
-      @categories = Post.joins(:category).where(sql_query, query: "%#{params[:query]}%" )
+      category = Category.find_by_name(params[:query])
+      @posts = category.posts
     else
-      @categories = Category.all
+      @posts = Post.all
     end
-
-    @posts = Post.all
-    @feedbacks = Feedback.all
   end
 
   def show
