@@ -50,7 +50,7 @@ class FeedbacksController < ApplicationController
   end
 
   def feedback_params
-    params.require(:feedback).permit(:post_id, :description)
+    params.require(:feedback).permit(:post_id, :description, :feedback_id,)
   end
 
 end

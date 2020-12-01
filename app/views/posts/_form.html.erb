@@ -1,0 +1,5 @@
+<%= simple_form_for([@post, @feedback], remote: true) do |f| %>
+  <%= f.input :feedback_id, input_html: {value: feedback_id}, as: :hidden %>
+  <%= f.input :description %>
+  <%= f.button :submit, class: 'btn btn-success' %>
+<% end %>
