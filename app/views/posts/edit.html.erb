@@ -1,0 +1,8 @@
+ <h1>Edit post</h1>
+        <%= simple_form_for @post do |f| %>
+        <%= f.input :title %>
+        <%= f.input :description %>
+        <%= f.input :photos, as: :file, input_html: {multiple: true, accept: ".pdf", value: "Choose PDF"} %>
+        <%= f.input :category_ids, collection: Category.all, as: :check_boxes, label_method: :name %>
+        <%= f.button :submit, class: 'btn btn-success' %>
+        <% end %>
