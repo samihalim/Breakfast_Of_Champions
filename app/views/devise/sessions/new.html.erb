@@ -1,7 +1,7 @@
-<div class="login-container">
+<div class="login-container" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/1600x900/?art);">
   <div class="login-cards">
     <div class="login-logo">
-      <p> <%= image_tag("BOC-07_square_black.png", alt:"BoC logo", width: 80, class: "logo-login") %> Breakfast of Champions</p>
+      <p> <%= image_tag("BOC-10.png", alt:"BoC logo", width: 80, class: "logo-login") %> Breakfast of Champions</p>
     </div>
 
     <div class="login-form">
@@ -20,11 +20,13 @@
       </div>
 
       <div class="form-actions">
-        <button class="btn btn-warning"><%= f.button :submit, "Log in" %></button>
+        <button class="btn btn-info"><%= f.button :submit, "Log in" %></button>
       </div>
       <% end %>
 
-      <%= render "devise/shared/links" %>
+      <div class="login-shared-links">
+        <%= render "devise/shared/links" %>
+      </div>
     </div>
   </div>
 </div>
