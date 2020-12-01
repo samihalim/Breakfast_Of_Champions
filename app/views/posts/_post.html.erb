@@ -1,0 +1,15 @@
+  <h2>
+    Feedback: <%= feedback.description %>
+  </h2>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    <i class="fas fa-edit"></i>
+  </button>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+      <h1>Edit your feedback</h1>
+        <%= simple_form_for [@post, feedback] do |f| %>
+          <%= f.input :description %>
+          <%= f.button :submit, class: 'btn btn-success' %>
+        <% end %>
+      </div>
+  </div>
