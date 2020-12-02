@@ -2,11 +2,12 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
+
     if params[:query].present?
       category = Category.find_by_name(params[:query])
       @posts = category.posts
     else
-      @posts = Post.all
+      @pagy, @posts = pagy(Post.all, items: 15)
     end
   end
 
