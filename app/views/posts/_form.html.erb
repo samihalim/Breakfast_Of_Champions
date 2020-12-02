@@ -1,5 +1,12 @@
-<%= simple_form_for([@post, @feedback], remote: true) do |f| %>
-  <%= f.input :feedback_id, input_html: {value: feedback_id}, as: :hidden %>
-  <%= f.input :description %>
-  <%= f.button :submit, class: 'btn btn-success' %>
-<% end %>
+<a data-toggle="collapse" href="#collapseExample<%= feedback_id %>" role="button" aria-expanded="false" aria-controls="collapseExample<%= feedback_id %>">
+  Reply
+</a>
+
+
+<div class="collapse" id="collapseExample<%= feedback_id %>">
+  <%= simple_form_for([@post, @feedback], remote: true) do |f| %>
+    <%= f.input :feedback_id, input_html: {value: feedback_id}, as: :hidden %>
+    <%= f.input :description, label: false %>
+    <%= f.button :submit, "Reply", class: 'btn btn-success' %>
+  <% end %>
+</div>

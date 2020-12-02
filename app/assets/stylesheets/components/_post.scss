@@ -1,0 +1,20 @@
+.post {
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+
+}
+
+.post img {
+  border-radius: 2px;
+}
+
+.post-description {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  top: 0;
+  width: 100%;
+ position: sticky;
+
+}

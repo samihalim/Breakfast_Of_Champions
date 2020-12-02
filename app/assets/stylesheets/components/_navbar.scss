@@ -19,19 +19,17 @@
 
 .search-form-control {
   position: relative;
-  padding-top: 16px;
-  border: 1px solid rgba(100,100,100,0.1);
 }
 
 .search-form-control .btn {
   position: absolute;
-  top: 25px;
+  top: 8px;
   bottom: 8px;
   right: 8px;
 }
 
 .search-form-control .form-control {
-  height: 4rem;
+  height: 3.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   border: 1px solid #E7E7E7;
 }
@@ -42,4 +40,8 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
+.search {
+    flex-grow: 0.3;
+    padding-top: 15px;
+}
 
