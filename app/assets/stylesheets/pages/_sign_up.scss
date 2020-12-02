@@ -1,5 +1,6 @@
 .signup-container {
   background: white;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,12 +35,13 @@
   width: 500px;
   border: 1px solid rgba(0,0,0,0.2);
   background: white;
-  height: 100vh;
+  height: auto;
   border-radius: 10px;
   padding: 50px;
   box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
   .btn {
     color: white;
+    width: 100%;
     &:hover {
       background-color: #e09600;
     }

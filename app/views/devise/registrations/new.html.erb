@@ -10,30 +10,33 @@
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
       <span class="sign-up-font">
-      <div class="form-inputs">
-        <%= f.input :user_name,
-        required: true,
-        autofocus: true%>
-        <%= f.input :first_name,
-        required: true,
-        autofocus: true%>
-        <%= f.input :last_name,
-        required: true,
-        autofocus: true%>
-        <%= f.input :email,
-        required: true,
-        autofocus: true,
-        input_html: { autocomplete: "email" }%>
-        <%= f.input :password,
-        required: true,
-        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-        input_html: { autocomplete: "new-password" } %>
-        <%= f.input :password_confirmation,
-        required: true,
-        input_html: { autocomplete: "new-password" } %>
-        <%= f.input :photo, as: :file,
-        hint: "Please choose a photo of yourself so others can see who you are"%>
-      </div>
+        <div class="form-inputs">
+          <%= f.input :username,
+          required: true,
+          autofocus: true%>
+          <%= f.input :email,
+          required: true,
+          autofocus: true,
+          input_html: { autocomplete: "email" }%>
+          <%= f.input :password,
+          required: true,
+          hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+          input_html: { autocomplete: "new-password" } %>
+          <%= f.input :password_confirmation,
+          required: true,
+          input_html: { autocomplete: "new-password" } %>
+          <%= f.input :url,
+          hint: "Paste your Linked-In URL here" %>
+          <%= f.input :photo, as: :file,
+          hint: "Please choose a photo of yourself so others can see who you are"%>
+          <%= f.input :experience,
+          hint: "Novice - Amateur - Learner - Skilled - Expert - Master"%>
+          <%= f.input :biography,
+          hit: "Please tell us something about yourself"%>
+          <%= f.input :location,
+          hint: "Where are you based?"%>
+
+        </div>
       </span>
       <div class="form-actions">
         <button class="btn btn-info"><%= f.button :submit, "Sign up" %></button>
@@ -41,7 +44,8 @@
       <% end %>
 
       <div class="signup-shared-links">
-        <p>Already an account? <%= render "devise/shared/links" %></p>
+        <p>Already an account?</p>
+        <%= render "devise/shared/links" %>
       </div>
     </div>
   </div>
