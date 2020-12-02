@@ -11,7 +11,7 @@
       <%= f.error_notification %>
       <span class="sign-up-font">
         <div class="form-inputs">
-          <%= f.input :user_name,
+          <%= f.input :username,
           required: true,
           autofocus: true%>
           <%= f.input :email,
@@ -25,9 +25,17 @@
           <%= f.input :password_confirmation,
           required: true,
           input_html: { autocomplete: "new-password" } %>
-          <%= f.input :email, prepend: "https://www.linkedin.com/in/" %>
+          <%= f.input :url,
+          hint: "Paste your Linked-In URL here" %>
           <%= f.input :photo, as: :file,
           hint: "Please choose a photo of yourself so others can see who you are"%>
+          <%= f.input :experience,
+          hint: "Novice - Amateur - Learner - Skilled - Expert - Master"%>
+          <%= f.input :biography,
+          hit: "Please tell us something about yourself"%>
+          <%= f.input :location,
+          hint: "Where are you based?"%>
+
         </div>
       </span>
       <div class="form-actions">
