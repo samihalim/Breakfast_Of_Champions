@@ -37,7 +37,7 @@ puts "creating post and feedback"
 
 
 
-10.times do
+50.times do
   post = Post.create(
     title: Faker::Company.catch_phrase,
     description: Faker::Quote.famous_last_words,
