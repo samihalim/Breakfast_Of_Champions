@@ -1,36 +1,35 @@
 <div class="most-commented">
 
-<h5> Most commented... </h5>
+  <h5> Most commented... </h5>
 
 </div>
 <div class="cards">
   <% @posts.each do |post| %>
   <%= link_to post_path(post), class:"no-hover-link" do %>
   <div class="card">
-  <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://source.unsplash.com/random)">
-    <ul style="list-style-type: none;">
-      <% post.photos.each do |photo| %>
-      <%= cl_image_tag "#{photo.key}.jpg", height: 300, width: 400, crop: :fill %>
-      <% end %>
-    </ul>
-  </div>
+    <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://source.unsplash.com/random)">
+      <ul style="list-style-type: none;">
+        <% post.photos.each do |photo| %>
+        <%= cl_image_tag "#{photo.key}.jpg", height: 300, width: 400, crop: :fill %>
+        <% end %>
+      </ul>
+    </div>
 
-  <div class="card-infos">
-    <div class="row">
-      <div class="col-10">
-        <br>
-        <h5><strong> <%= post.title %> </strong></h5>
-       <h6><%= post.user.user_name %></h6>
-        <p><%= post.description %></p>
-        <button class="btn-info" style="opacity: 0.8;"><% post.categories.each do |category| %>
-      <%= category.name %></button>
-      <% end %>
-      </div>
-      <div class="col-2"> <br> <div class="icon"> <i class="fas fa-comment-alt fa-s"></i> <i class="fas fa-eye fa-s"></i> </div>
-      <div class="icon"><p>150</p><p>69</p></div></div></div>
-  </div>
-  </div>
-  <% end %>
-  <% end %>
-</div>
+    <div class="card-infos">
+      <div class="row">
+        <div class="col-10">
+          <br>
+          <h5><strong> <%= post.title %> </strong></h5>
+          <h6><%= post.user.user_name %></h6>
+          <button class="btn-info" style="opacity: 0.8;"><% post.categories.each do |category| %>
+           <%= category.name %></button>
+           <% end %>
+         </div>
+         <div class="col-2"> <br> <div class="icon"> <i class="fas fa-comment-alt fa-s"></i> <i class="fas fa-eye fa-s"></i> </div>
+         <div class="icon"><p> 150 </p><p> 69 </p></div></div></div>
+       </div>
+     </div>
+     <% end %>
+     <% end %>
+   </div>
 
