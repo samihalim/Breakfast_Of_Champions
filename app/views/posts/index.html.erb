@@ -7,12 +7,8 @@
   <% @posts.each do |post| %>
   <%= link_to post_path(post), class:"no-hover-link" do %>
   <div class="card">
-    <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://source.unsplash.com/random)">
-      <ul style="list-style-type: none;">
-        <% post.photos.each do |photo| %>
-        <%= cl_image_tag "#{photo.key}.jpg", height: 300, width: 400, crop: :fill %>
-        <% end %>
-      </ul>
+    <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path post.photos.first.key %>)">
+
     </div>
 
     <div class="card-infos">

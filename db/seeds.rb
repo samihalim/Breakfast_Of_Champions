@@ -34,12 +34,17 @@ puts "creating post and feedback"
 
 
 
+
+
+
 10.times do
   post = Post.create(
     title: Faker::Company.catch_phrase,
     description: Faker::Quote.famous_last_words,
     user: User.all.sample,
     )
+    file = URI.open('https://source.unsplash.com/weekly?art')
+    post.photos.attach(io: file, filename: "#{post.title}.png", content_type: 'image/png')
 
   1.times do
 
