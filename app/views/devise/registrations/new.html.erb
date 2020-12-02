@@ -10,30 +10,26 @@
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
       <span class="sign-up-font">
-      <div class="form-inputs">
-        <%= f.input :user_name,
-        required: true,
-        autofocus: true%>
-        <%= f.input :first_name,
-        required: true,
-        autofocus: true%>
-        <%= f.input :last_name,
-        required: true,
-        autofocus: true%>
-        <%= f.input :email,
-        required: true,
-        autofocus: true,
-        input_html: { autocomplete: "email" }%>
-        <%= f.input :password,
-        required: true,
-        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-        input_html: { autocomplete: "new-password" } %>
-        <%= f.input :password_confirmation,
-        required: true,
-        input_html: { autocomplete: "new-password" } %>
-        <%= f.input :photo, as: :file,
-        hint: "Please choose a photo of yourself so others can see who you are"%>
-      </div>
+        <div class="form-inputs">
+          <%= f.input :user_name,
+          required: true,
+          autofocus: true%>
+          <%= f.input :email,
+          required: true,
+          autofocus: true,
+          input_html: { autocomplete: "email" }%>
+          <%= f.input :password,
+          required: true,
+          hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+          input_html: { autocomplete: "new-password" } %>
+          <%= f.input :password_confirmation,
+          required: true,
+          input_html: { autocomplete: "new-password" } %>
+
+          <%= f.input :email, prepend: "example-", append: "@gmail.com" %>
+          <%= f.input :photo, as: :file,
+          hint: "Please choose a photo of yourself so others can see who you are"%>
+        </div>
       </span>
       <div class="form-actions">
         <button class="btn btn-info"><%= f.button :submit, "Sign up" %></button>
