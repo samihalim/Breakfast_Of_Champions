@@ -4,7 +4,7 @@
     <%= cl_image_tag @user.photo.key, height: 90, width: 90, crop: :fill, class: "rounded-circle", alt: "avatar-large" %>
     <% else %>
     <div class="initials-avatar">
-      <div class="initials"><%= @user.user_name[0..1].upcase %></div>
+      <div class="initials"><%= @user.username[0..1].upcase %></div>
     </div>
     <%#= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
     <% end %>
