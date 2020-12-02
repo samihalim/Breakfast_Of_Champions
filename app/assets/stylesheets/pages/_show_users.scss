@@ -17,6 +17,15 @@
   padding: 20px 50px;
 }
 
+.about-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.about-info {
+  margin-left: 100px;
+}
+
 .color-tag {
   color: black;
 
