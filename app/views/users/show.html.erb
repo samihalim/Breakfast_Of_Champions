@@ -21,44 +21,52 @@
 
     <!-- Tab content for About me -->
     <div class="tab-content">
-      <div id="about" class="tab-pane fade in active">
-        <div class="about-container">
-          <div class="name-info">
+      <div id="about" class="tab-pane fadein active">
+        <div class="d-flex flex-row">
+          <div>
             <h4><%= @user.name %></h4>
           </div>
           <div class="about-info">
             <p><%= @user.biography %></p>
-            <p><%= @user.location %></p>
+            <div class="d-flex flex-row p-10">
+              <i class="fas fa-map-marker-alt"></i>
+              <p><%= @user.location %></p>
+            </div>
             <p><%= @user.experience %></p>
           </div>
         </div>
-       <ul style="list-style: none; padding-inline-start: none">
-        <!-- make the list dynamic for each user -->
-        <li><%#= @user.name %> </li>
-        <li><%#= @user.biography %> </li>
-        <li><%#= @user.location %> </li>
-        <li><%#= @user.experience %> </li>
-      </ul>
     </div>
     <div id="posts" class="tab-pane fade">
+
       <div class="cards">
-        <% @user.posts.each do |post| %>
-        <div class="card">
-          <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://source.unsplash.com/random)">
-            <ul style="list-style-type: none;">
-              <% post.photos.each do |photo| %>
-              <%= cl_image_tag "#{photo.key}.jpg", height: 300, width: 400, crop: :fill %>
-              <% end %>
-              <li> <h2> <%= post.title %> </h2></li>
-              <li><%= post.description %></li>
-              <% post.categories.each do |category| %>
-              <li><%= category.name %></li>
-              <% end %>
-            </ul>
-          </div>
-        </div>
-        <% end %>
-      </div>
+  <% @user.posts.each do |post| %>
+  <%= link_to post_path(post), class:"no-hover-link" do %>
+  <div class="card">
+    <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path post.photos.first.key %>)">
+
+    </div>
+
+    <div class="card-infos">
+      <div class="row">
+        <div class="col-10">
+          <br>
+          <h5><strong> <%= post.title %> </strong></h5>
+          <h6><%= post.description %></h6>
+
+          <button class="btn-info" style="opacity: 0.8;"><% post.categories.each do |category| %>
+           <%= category.name %></button>
+           <% end %>
+         </div>
+         <div class="col-2"> <br> <div class="icon"> <i class="fas fa-comment-alt fa-s"></i> <i class="fas fa-eye fa-s"></i> </div>
+         <div class="icon"><p>150</p><p>69</p></div></div></div>
+       </div>
+     </div>
+     <% end %>
+     <% end %>
+   </div>
+
+
+
     </div>
   </div>
 
