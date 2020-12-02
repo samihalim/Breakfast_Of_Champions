@@ -1,39 +1,42 @@
-<h2><%= @post.title %></h2>
-<h3><%= @post.description %></h3>
 
-<% @post.photos.each do |photo| %>
-  <%= cl_image_tag "#{photo.key}.jpg", height: 300, width: 400, crop: :fill %>
-<% end %>
 
-<button class="btn btn-success"> <%= link_to "Edit a post", edit_post_path %></button>
-          <%= link_to post_path(@post), method: :delete, data: { confirm: "Are you sure?" } do %>
-            <i class="fas fa-trash-alt" id="cards"></i>
+  <div class="row px-5">
+  <div class="col-9 py-5">
+    <div class="post d-flex justify-content-center">
+    <% @post.photos.each do |photo| %>
+      <%= cl_image_tag "#{photo.key}.jpg", class: "shadow-lg"%>
+    <% end %>
+    </div>
+      <button class="btn btn-success"> <%= link_to "Edit a post", edit_post_path %></button>
+              <%= link_to post_path(@post), method: :delete, data: { confirm: "Are you sure?" } do %>
+                <i class="fas fa-trash-alt" id="cards"></i>
+              <% end %>
+  </div>
+
+  <div class="col-3 ">
+    <div class="post-description">
+      <h4><%= @post.title %></h4>
+        <h5><%= @post.description %></h5>
+          <li><% @post.categories.each do |category| %></li>
+          <%= category.name %>
           <% end %>
 
-<li><% @post.categories.each do |category| %></li>
-<%= category.name %>
-<% end %>
 
 
 
 
-
-
- <h1>Add your feedback</h1>
-        <%= simple_form_for([@post, @feedback], remote: true) do |f| %>
-        <%= f.input :description %>
-        <%= f.button :submit, class: 'btn btn-success' %>
-        <% end %>
-
-
-
-
-
-
-<% @post.feedbacks.where(feedback_id: nil).each do |feedback| %>
-  <%= render partial: "posts/post", locals: { feedback: feedback, level: 0 } %>
-<% end %>
-
-
+          <div class="post-feedback">
+            <h6>Add your feedback</h6>
+            <%= simple_form_for([@post, @feedback], remote: true) do |f| %>
+              <%= f.input :description, label: false %>
+              <%= f.button :submit, class: 'btn btn-success' %>
+            <% end %>
+          <% @post.feedbacks.where(feedback_id: nil).each do |feedback| %>
+            <%= render partial: "posts/post", locals: { feedback: feedback, level: 0 } %>
+          <% end %>
+          </div>
+    </div>
+  </div>
+  </div>
 
 
