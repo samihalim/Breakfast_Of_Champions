@@ -15,7 +15,7 @@
   <div class="tab-container">
     <!-- Tab links -->
     <ul class="nav nav-tabs">
-      <li class="active"><a class="color-tag" data-toggle="tab" href="#about">About me</a></li>
+      <li class="active"><a class="color-tag" data-toggle="tab" href="#about">About</a></li>
       <li><a class="color-tag" data-toggle="tab" href="#posts">Posts</a></li>
     </ul>
 
@@ -24,8 +24,7 @@
       <div id="about" class="tab-pane fade in active">
        <ul style="list-style: none; padding-inline-start: none">
         <!-- make the list dynamic for each user -->
-        <li>Firstname: <%= @user.first_name %> </li>
-        <li>Lastname: <%= @user.last_name %> </li>
+        <li><%= "#{@user.first_name} #{@user.last_name}" %> </li>
       </ul>
     </div>
     <div id="posts" class="tab-pane fade">
