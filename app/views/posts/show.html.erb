@@ -7,9 +7,11 @@
       <%= cl_image_tag "#{photo.key}.jpg", class: "shadow-lg"%>
     <% end %>
     </div>
-      <button class="btn btn-success"> <%= link_to "Edit a post", edit_post_path %></button>
+     <%= link_to edit_post_path do %>
+       <i class="fas fa-edit" id="edit-post"></i>
+       <% end %>
               <%= link_to post_path(@post), method: :delete, data: { confirm: "Are you sure?" } do %>
-                <i class="fas fa-trash-alt" id="cards"></i>
+                <i class="fas fa-trash-alt" id="delete"></i>
               <% end %>
   </div>
 
