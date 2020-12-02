@@ -20,8 +20,30 @@ Category.destroy_all
 
 puts "creating user"
 
-User.create(first_name: 'John', last_name: 'Smith', user_name: 'John Smith', email: 'a@a.com', password: '654321')
+User.create(name: 'John Smith', username: 'John Smith', email: 'a@a.com', password: '654321')
 User.create(first_name: 'Sam', last_name: 'Bam', user_name: 'Sam Bam', email: 'bb@a.com', password: '65432134')
+User.create()
+
+
+
+
+
+5.times do
+  user = User.create (
+    name: Faker::Name.name,
+    email: Faker::Internet.email,
+    username: Faker::Artist.name,
+    biography: Faker::Lorem.paragraphs,
+    experience: Faker::Lorem.paragraphs,
+    location: Faker::Address.city
+    password: "password",
+    password_confirmation: "password"
+  )
+end
+
+
+
+
 
 puts "creating categories"
 
