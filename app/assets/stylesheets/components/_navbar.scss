@@ -43,14 +43,14 @@
 .search-form-control .form-control {
   border-radius: 15px;
   height: 2rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-  border: 1px solid #E7E7E7;
+  box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.08);
+  border: 1px hidden #E7E7E7;
 }
 
 .search-form-control .form-control:focus {
   border: 1px solid;
   outline: none !important;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
 }
 
 .search {
