@@ -1,5 +1,5 @@
 meta_product_name: "Breakfast of Champions"
 meta_title: "Breakfast of Champions - The peer to peer feedback platform for creatives."
 meta_description: "The first peer to peer feedback platform for creatives to share their work in progress and get authentic constructive feedback from the community. "
-meta_image: "BOC0-07_square_black.png" # should exist in `app/assets/images/`
+meta_image: "logo.png" # should exist in `app/assets/images/`
 twitter_account: "@product_twitter_account"   # required for Twitter Cards
