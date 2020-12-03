@@ -23,19 +23,39 @@
     <div class="tab-content">
       <div id="about" class="tab-pane fadein active">
         <div class="d-flex flex-row">
-          <div>
+          <div class="d-flex flex-row">
             <h4><%= @user.name %></h4>
+            <% if user_signed_in? && current_user.id == @user.id %>
+              <div>
+                <%= link_to edit_user_registration_path(current_user) do %>
+                <i class="fas fa-user-edit icon-user-edit"></i>
+                <% end %>
+                <% end %>
+              </div>
           </div>
-          <div class="about-info">
-            <p><%= @user.biography %></p>
-            <div class="d-flex flex-row p-10">
-              <i class="fas fa-map-marker-alt"></i>
-              <p><%= @user.location %></p>
-            </div>
-            <p><%= @user.experience %></p>
+          <div class="about-info d-flex flex-column">
             <div>
-              <%= link_to "Add your Profile", edit_user_registration_path(current_user) %>
+              <p class="bold-text">Biography</p>
+              <p><%= @user.biography %></p>
             </div>
+            <div>
+              <p class="bold-text">Location</p>
+              <div class="d-flex flex-row p-10">
+                <i class="fas fa-map-marker-alt icon-user-location"></i>
+                <p><%= @user.location %></p>
+              </div>
+            </div>
+             <div>
+               <p class="bold-text">Experience</p>
+               <div>
+                <% @user.experience.times do %>
+                  <i class="fas fa-star colored-star"></i>
+                <% end %>
+                <% (5 - @user.experience).times do %>
+                  <i class="fas fa-star uncolored-star"></i>
+                <% end %>
+               </div>
+             </div>
           </div>
         </div>
       </div>
