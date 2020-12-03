@@ -1,14 +1,17 @@
 .signup-container {
   background: white;
-  height: 100%;
+  height: 1600px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.signup-logo p {
+  padding: 20px 1px 1px 20px;
+}
+
 .signup-cards {
   padding-top: 20px;
-  margin-left: 300px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
@@ -32,7 +35,7 @@
 }
 
 .signup-form {
-  width: 500px;
+  width: 800px;
   border: 1px solid rgba(0,0,0,0.2);
   background: white;
   height: auto;
@@ -95,4 +98,8 @@
   .signup-cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+#user_biography {
+  height: 200px;
 }
