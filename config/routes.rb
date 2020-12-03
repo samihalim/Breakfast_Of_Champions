@@ -8,5 +8,8 @@ Rails.application.routes.draw do
     resources :feedbacks, only: [:create, :edit, :update, :show]
   end
 
+  authenticate :user, ->(user) { user.admin? } do
+  mount Blazer::Engine, at: "blazer"
+  end
 
 end

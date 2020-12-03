@@ -73,3 +73,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pagy', '~> 3.10'
 
 gem 'rails_admin', '~> 2.0'
+gem 'blazer'
