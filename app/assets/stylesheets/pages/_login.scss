@@ -1,24 +1,26 @@
 .login-container {
   background: white;
-  height: 80vh;
+  height: 700px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.login-logo p {
+  padding: 20px 1px 1px 20px;
+}
+
 .login-cards {
   padding-top: 20px;
-  margin-left: 300px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
 }
 
 .login-logo {
-  width: 500px;
+  width: 700px;
   color: white;
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 36px;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -28,6 +30,7 @@
 }
 
 .login-form {
+  margin-left: 100px;
   width: 500px;
   border: 1px solid rgba(0,0,0,0.2);
   background: white;
