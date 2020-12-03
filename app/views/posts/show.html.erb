@@ -23,8 +23,8 @@
     <div class="post-description">
       <h4><%= @post.title %></h4>
       <h5><%= @post.description %></h5>
-      <li><% @post.categories.each do |category| %></li>
-      <%= category.name %>
+      <button class="btn-info-1" style="opacity: 0.8;"><% @post.categories.each do |category| %>
+      <%= category.name %></button>
       <% end %>
 
 
