@@ -20,8 +20,8 @@ Category.destroy_all
 
 puts "creating user"
 
-User.create(name: 'John Smith', username: 'johnsmith', email: 'a@a.com', password: '654321', location: "Amsterdam", biography: "looking for great oportunities in ux design", experience: "midlevel")
-User.create(name: 'Sam Bam', username: 'sambam', email: 'bb@a.com', password: '65432134', location: "New York", biography: "looking for great oportunities in logo design", experience: "highlevel")
+User.create(name: 'John Smith', username: 'johnsmith', email: 'a@a.com', password: '654321', location: "Amsterdam", biography: "looking for great oportunities in ux design", experience: 2)
+User.create(name: 'Sam Bam', username: 'sambam', email: 'bb@a.com', password: '65432134', location: "New York", biography: "looking for great oportunities in logo design", experience: 4)
 
 puts "creating categories"
 
