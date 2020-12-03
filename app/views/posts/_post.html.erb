@@ -10,7 +10,7 @@
     </div>
     <div class="collapse" id="collapse<%=feedback.id%>">
       <div class="card card-body">
-        <h3>Edit your feedback</h3>
+        <p>Edit your feedback</p>
           <%= simple_form_for([@post, feedback], remote: true) do |f| %>
             <%= f.input :description, label: false %>
             <%= f.button :submit, class: 'btn btn-success' %>
