@@ -7,9 +7,8 @@ class PostsController < ApplicationController
       category = Category.find_by_name(params[:query])
       @posts = category.posts
     else
-      @pagy, @posts = pagy(Post.all, items: 15)
+      @pagy, @posts = pagy(Post.all.order(updated_at: :desc), items: 15)
     end
-    @posts = Post.all.order(updated_at: :desc)
   end
 
   def show

@@ -1,6 +1,8 @@
 <div class="banner" style="background-color: #FFAC00">
   <div class="container">
-    <h1><strong>Breakfast of Champions</strong> or <strong>the platform</strong> for creative people to receive feedback!</h1>
+    <h1><strong>Breakfast of Champions</strong>
+      <br>
+     <strong> The peer to peer feedback platform for creatives!</strong></h1>
     <br>
         <%= image_tag "plate", size: "260x260", class: "image-banner"%>
 
@@ -9,6 +11,6 @@
     <br>
     <br>
     <br>
-        <a class="btn btn-flat" href="#">Start my profile</a>
+        <%= link_to "Create a Profile", new_user_registration_path, class: "btn btn-flat" %>
   </div>
 </div>
