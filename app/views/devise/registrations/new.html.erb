@@ -14,6 +14,9 @@
           <%= f.input :username,
           required: true,
           autofocus: true%>
+          <%= f.input :name,
+          required: true,
+          autofocus: true%>
           <%= f.input :email,
           required: true,
           autofocus: true,
@@ -26,16 +29,16 @@
           required: true,
           input_html: { autocomplete: "new-password" } %>
           <%= f.input :url,
+          required: true,
           hint: "Paste your Linked-In URL here" %>
           <%= f.input :photo, as: :file,
           hint: "Please choose a photo of yourself so others can see who you are"%>
           <%= f.input :experience,
-          hint: "Novice - Amateur - Learner - Skilled - Expert - Master"%>
+          hint: "How many years of experience do you have in the creative field?"%>
           <%= f.input :biography,
           hit: "Please tell us something about yourself"%>
           <%= f.input :location,
           hint: "Where are you based?"%>
-
         </div>
       </span>
       <div class="form-actions">
