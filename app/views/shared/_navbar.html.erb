@@ -37,14 +37,6 @@
               <%= current_user.username[0..1].upcase %>
       </div>
       <% end %>
-      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-        <%= link_to "Profile", user_profile_path(current_user.username), class: "dropdown-item" %>
-        <%= link_to "Another action", "#", class: "dropdown-item" %>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-      </div>
-      <% else %>
-      <div class="avatar-initials-navbar" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      </div>
       <% end %>
       <% if user_signed_in? %>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
