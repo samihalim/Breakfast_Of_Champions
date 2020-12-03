@@ -26,11 +26,11 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user = current_user
-
     if @post.save!
       redirect_to @post, notice: 'A post was successfully created.'
 
     else
+      p @post.errors.full_messages
       render :new
     end
   end
