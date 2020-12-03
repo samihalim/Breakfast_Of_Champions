@@ -7,7 +7,6 @@
     <div class="post d-flex justify-content-center">
       <% @post.photos.each do |photo| %>
       <%= cl_image_tag "#{photo.key}.jpg", class: "shadow-lg"%>
-      <%= cl_image_tag "#{photo.key}.jpg", class: "shadow-lg"%>
       <% end %>
     </div>
     <% if @post.user == current_user %>
