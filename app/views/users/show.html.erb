@@ -33,44 +33,45 @@
               <p><%= @user.location %></p>
             </div>
             <p><%= @user.experience %></p>
+            <div>
+              <%= link_to "Add your Profile", edit_user_registration_path(current_user) %>
+            </div>
           </div>
         </div>
-    </div>
-    <div id="posts" class="tab-pane fade">
+      </div>
 
-      <div class="cards">
-  <% @user.posts.each do |post| %>
-  <%= link_to post_path(post), class:"no-hover-link" do %>
-  <div class="card">
-    <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path post.photos.first.key %>)">
+      <!-- Tab content for Posts -->
+      <div id="posts" class="tab-pane fade">
+        <div class="cards">
+          <% @user.posts.each do |post| %>
+          <%= link_to post_path(post), class:"no-hover-link" do %>
+          <div class="card">
+            <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path post.photos.first.key %>)">
+            </div>
 
-    </div>
+            <div class="card-infos">
+              <div class="row">
+                <div class="col-10">
+                  <br>
+                  <h5><strong> <%= post.title %> </strong></h5>
+                  <h6><%= post.description %></h6>
 
-    <div class="card-infos">
-      <div class="row">
-        <div class="col-10">
-          <br>
-          <h5><strong> <%= post.title %> </strong></h5>
-          <h6><%= post.description %></h6>
-
-          <button class="btn-info" style="opacity: 0.8;"><% post.categories.each do |category| %>
-           <%= category.name %></button>
-           <% end %>
+                  <button class="btn-info" style="opacity: 0.8;"><% post.categories.each do |category| %>
+                   <%= category.name %></button>
+                   <% end %>
+                 </div>
+                 <div class="col-2"> <br> <div class="icon"> <i class="fas fa-comment-alt fa-s"></i> <i class="fas fa-eye fa-s"></i> </div>
+                 <div class="icon"><p>150</p><p>69</p></div>
+               </div>
+             </div>
+           </div>
          </div>
-         <div class="col-2"> <br> <div class="icon"> <i class="fas fa-comment-alt fa-s"></i> <i class="fas fa-eye fa-s"></i> </div>
-         <div class="icon"><p>150</p><p>69</p></div></div></div>
+         <% end %>
+         <% end %>
        </div>
      </div>
-     <% end %>
-     <% end %>
    </div>
-
-
-
-    </div>
   </div>
-
-</div>
 </div>
 
 

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   get 'users/:id', to: 'users#show', as: :user_profile
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
@@ -11,5 +11,4 @@ Rails.application.routes.draw do
   authenticate :user, ->(user) { user.admin? } do
   mount Blazer::Engine, at: "blazer"
   end
-
 end
