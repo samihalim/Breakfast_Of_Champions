@@ -24,13 +24,15 @@
   justify-content: center;
   display: flex;
   align-items: center;
-  .logo-login {
-    border-radius: 20%;
-  }
 }
+  .logo-login1 {
+    margin-left: 505px;
+    margin-top: 16px;
+  }
 
 .login-form {
-  margin-left: 100px;
+  margin-top: 16px;
+  margin-left: 270px;
   width: 500px;
   border: 1px solid rgba(0,0,0,0.2);
   background: white;
@@ -49,8 +51,8 @@
     margin-top: 50px;
     a{
       padding: 10px;
-      background: #FFAC00;
-      color: white;
+      color:  #FFAC00;
+      text-decoration: underline;
       border-radius: 2px;
       &:hover {
         text-decoration: none;
