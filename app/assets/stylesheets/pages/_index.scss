@@ -7,3 +7,44 @@
   margin: 20px;
   padding: 10px 10px 0px 10px;
 }
+
+.pagy-bootstrap-nav {
+  float: center;
+  border-style: none;
+}
+
+.pagination {
+  border-color: black;
+  background-color: white;
+}
+
+
+.pagination li {
+
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.pagination a {
+  padding: 7px;
+  color: black;
+  border-radius: 15px;
+}
+
+.page-item a {
+  border-radius: 15px;
+  color: black;
+}
+
+.page-item.active .page-link {
+    border-radius: 15px;
+    z-index: 3;
+    color: white;
+    background-color: #FFAC00;
+    border-color: #FFAC00;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
