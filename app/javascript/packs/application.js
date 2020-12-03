@@ -25,6 +25,7 @@ require("channels")
 import "bootstrap";
 // import "photo_preview";
 
+
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { previewImageOnFileSelect } from '../components/photo_preview';
