@@ -2,7 +2,11 @@
   <div class="edit-user-cards">
     <div class="edit-user-form">
       <h2>Edit <%= resource_name.to_s.humanize %></h2>
+      <% if current_user.photo.attached?%>
       <%= cl_image_tag current_user.photo.key, crop: :fill, class: "avatar-large"%>
+      <% else %>
+      <%= image_tag "logo.png", crop: :fill, class: "avatar-large"%>
+      <% end %>
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= f.error_notification %>
 
