@@ -1,7 +1,6 @@
 .navbar {
   height: 62px;
-  box-shadow: 1px 1px 1px 1px rgba(0,0,0,01);
-  border: 1px hidden #E7E7E7;
+  border: 0.1px hidden grey;
 }
 
 .navbar .fa-flag {
@@ -17,6 +16,7 @@
   justify-content: space-between;
   background: white;
   padding: 0;
+
 }
 
 .navbar-lewagon .navbar-collapse {
