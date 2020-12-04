@@ -26,6 +26,12 @@
 .get-started-container {
   display: flex;
   justify-content: space-between;
+
+}
+
+.get-started-flex {
+  display: flex;
+  flex-direction: row;
 }
 
 .get-started h1 {
