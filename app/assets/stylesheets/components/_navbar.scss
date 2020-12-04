@@ -1,6 +1,7 @@
 .navbar {
-  margin: 10px;
-  height: 45px;
+  height: 62px;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,01);
+  border: 1px hidden #E7E7E7;
 }
 
 .navbar .fa-flag {
@@ -27,7 +28,7 @@
 }
 
 .search-form-control {
-  top: 6px;
+  top: 9px;
   position: relative;
   padding: 2px;
 }
@@ -35,14 +36,14 @@
 .search-form-control .btn {
   opacity: 0.8;
   position: absolute;
-  top: 0px;
+  top: 10px;
   bottom: 7px;
   right: 1px;
 }
 
 .search-form-control .form-control {
   border-radius: 15px;
-  height: 2rem;
+  height: 3rem;
   box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.08);
   border: 1px hidden #E7E7E7;
 }

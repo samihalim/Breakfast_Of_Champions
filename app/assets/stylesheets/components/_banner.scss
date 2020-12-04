@@ -1,26 +1,23 @@
 .banner {
+  box-sizing: content-box;
   background-position: center;
-  margin: 5px 10px 5px 10px;
-  border-radius: 2px;
   opacity: 0.9;
   width: 95%;
-  margin-left: 40px;
 }
 
 .banner h1 {
   margin: 30;
   padding: 100px 20px 20px 20px;
-  color: white;
+  color: black;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
 }
 
 .banner p {
-  margin: 30;
   padding: 20px 20px 20px 20px;
   font-size: 20px;
-  color: white;
+  color: black;
   opacity: .9;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
@@ -31,13 +28,14 @@
 }
 
 .banner .btn-flat {
-  color: white;
-  border-color: white;
+  color: black;
+  border-color: black;
   border-radius: 2px;
 }
 
 .image-banner {
   float: right;
+  object-fit: contain;
 }
 
 .image-banner:hover {
