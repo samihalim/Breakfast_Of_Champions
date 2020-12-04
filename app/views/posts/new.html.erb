@@ -2,7 +2,14 @@
   <div class="row justify-content-center">
     <div id="column" class="col-12">
       <div class="col-md-12">
-       <h1>Create a new post</h1>
+       <h1>Create a new post...</h1>
+       <h5>How it works:</h5>
+       <ul>
+       <li><p><i class="fas fa-upload"></i> - Upload your work in progress.</p></li>
+       <li><p><i class="fas fa-question"></i> - Ask your questions to the community.</p></li>
+       <li><p><i class="fas fa-comments"></i> - Get feedback.</p></li>
+       <li><p><i class="fas fa-signal"></i> - Take your work to the next level!</p></li>
+       </ul>
         <%= simple_form_for @post do |f| %>
         <%= f.input :title %>
         <%= f.input :description %>
