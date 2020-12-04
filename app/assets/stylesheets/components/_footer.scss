@@ -1,9 +1,9 @@
 .footer {
   background: white;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 100px;
   // padding: 0px 50px;
   padding-top: 10px;
@@ -13,42 +13,29 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
 }
 .footer-logo {
   width: 70px;
+  margin-bottom: 15px;
 }
-.footer-body-container {
+
+.footer-navigate-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-   h6 {
-    margin-bottom: 10px;
-  }
-}
-.navigate-container {
-  display: flex;
-  flex-direction: column;
-  // padding-right: 25px;
 }
 .navigate-text {
   color: rgba(0,0,0,0.3);
+  padding: 0 10px;
   &:hover {
     text-decoration: none;
     color: rgba(0,0,0,0.3);
     border-bottom: 2px solid rgba(0,0,0,0.3);
   }
 }
-.footer-links-container {
-  display: flex;
-  flex-direction: column;
-  // padding-left: 25px;
-}
 .footer-links {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  margin-bottom: 15px;
 }
 .footer-links a {
   color: black;
@@ -61,20 +48,14 @@
     color: #FFAC00;
   }
 }
-.footer .fa-heart {
-  color: #D23333;
-}
-.footer-copyright {
-  margin: 15px 0;
-}
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
-  .footer-body-container {
-  justify-content: space-around;
-    h6 {
-      margin-top: 10px;
-    }
-  }
+  // .footer-body-container {
+  // justify-content: space-around;
+  //   h6 {
+  //     margin-top: 10px;
+  //   }
+  // }
 }
 
