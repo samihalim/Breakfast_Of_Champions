@@ -48,7 +48,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to posts_path, notice: 'Post was successfully destroyed.'
+    redirect_to user_profile_path(current_user.username), notice: 'Post was successfully destroyed.'
   end
 
   private
@@ -58,7 +58,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-
     params.require(:post).permit(:title, :description, photos: [], category_ids: [])
   end
 end
