@@ -6,6 +6,7 @@
       <% if post.photos.attached? %>
           <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%=cl_image_path post.photos.first.key%>')">
           </div>
+          <% end %>
     </div>
 
     <div class="card-infos">
