@@ -19,19 +19,20 @@
   position: relative;
 }
 
-.get-started-container h1 {
-  font-size: 120px;
-}
 
 .get-started-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+}
 
+.get-started-container h1 {
+  font-size: 120px;
 }
 
 .get-started-flex {
   display: flex;
   flex-direction: row;
+  align-content: flex-end;
 }
 
 .get-started h1 {
@@ -42,7 +43,7 @@
 }
 
 .get-started p {
-  margin: 30;
+  margin-left: 30;
   padding: 20px 20px 20px 20px;
   font-size: 20px;
   color: white;
@@ -53,7 +54,6 @@
 .get-started a {
   padding: 24px;
   margin: 10px 10px 10px 10px;
-  text-align: center;
 }
 
 .get-started .btn-flat {
@@ -74,8 +74,8 @@
 .join-community-container {
   background-color: white;
   color: #FFAC00;
-  margin: 20px;
-  padding: 60px;
+  margin: 50px 20x 2px 1px;
+  padding: 20px;
 }
 
 .col-3 img {
@@ -86,6 +86,6 @@
   color: black;
   border-color: black;
   border-radius: 2px;
-  margin-top: 60px;
   padding: 30px 200px;
+  margin: 50px;
 }
