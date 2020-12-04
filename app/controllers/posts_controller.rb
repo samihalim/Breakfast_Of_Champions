@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   def index
     if params[:query].present?
       category = Category.find_by_name(params[:query])
-      @posts = category.posts
+      @pagy, @posts = pagy(category.posts.order(updated_at: :desc), items: 15)
     else
       @pagy, @posts = pagy(Post.all.order(updated_at: :desc), items: 15)
     end
