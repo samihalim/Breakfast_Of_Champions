@@ -2,7 +2,7 @@
 
     <div class="d-flex">
     <p class="reply">
-    <%= link_to feedback.user.username, user_profile_path(current_user.username), class: "a-reply"%>: <%= feedback.description %>
+    <%= link_to feedback.user.username, user_profile_path(feedback.user.username), class: "a-reply"%>: <%= feedback.description %>
     </p>
       <i class="fas fa-edit" type="button" data-toggle="collapse" data-target="#collapse<%=feedback.id%>" aria-expanded="false" aria-controls="collapseExample"></i>    </button>
     </div>
