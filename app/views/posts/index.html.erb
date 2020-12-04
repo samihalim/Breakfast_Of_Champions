@@ -4,9 +4,13 @@
   <div class="card">
     <div class="post d-flex justify-content-center">
       <% if post.photos.attached? %>
-          <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%=cl_image_path post.photos.first.key%>')">
-          </div>
-          <% end %>
+      <% post.photos.each do |photo| %>
+        <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%=cl_image_path "#{photo.key}.jpg"%>')">
+        </div>
+      <% end %>
+      <% else %>
+       <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path post.photos.first.key %>)">
+        <% end %>
     </div>
 
     <div class="card-infos">
