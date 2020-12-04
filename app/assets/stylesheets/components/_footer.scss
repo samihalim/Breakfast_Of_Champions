@@ -1,11 +1,27 @@
 .footer {
   background: white;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
+}
+.footer-logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  h6 {
+    margin: 0;
+  }
+}
+.footer-logo {
+  width: 70px;
+}
+.navigate-container {
+  display: flex;
+  flex-direction: column;
 }
 .footer-links {
   display: flex;
