@@ -2,7 +2,7 @@
   box-sizing: content-box;
   background-position: center;
   opacity: 0.9;
-  width: 95%;
+  padding: 60px;
 }
 
 .banner h1 {
@@ -40,4 +40,8 @@
 
 .image-banner:hover {
 opacity: 0.4;
+}
+
+.banner-container {
+  margin: 0;
 }

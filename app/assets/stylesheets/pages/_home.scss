@@ -1,16 +1,37 @@
 // Specific CSS for your home-page
 .get-started {
   box-sizing: content-box;
-  padding: 10px 10px 1000px 10px;
-  width: 100%;
+  padding: 60px;
+}
+
+.container-btn {
+  margin-top: 10px;
+  margin-bottom: 0;
+  height: 200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.vertical-center {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.get-started-container h1 {
+  font-size: 120px;
+}
+
+.get-started-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .get-started h1 {
-  margin: 30;
-  padding: 100px 20px 20px 20px;
+  padding: 30px 20px 20px 20px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
   font-weight: bold;
 }
 
@@ -25,13 +46,15 @@
 
 .get-started a {
   padding: 24px;
-  margin: 10px 100px 100px 100px;
+  margin: 10px 10px 10px 10px;
+  text-align: center;
 }
 
 .get-started .btn-flat {
   color: white;
   border-color: white;
   border-radius: 2px;
+  padding: 30px 200px;
 }
 
 .image-get-started {
@@ -42,3 +65,21 @@
   opacity: 0.4;
 }
 
+.join-community-container {
+  background-color: white;
+  color: #FFAC00;
+  margin: 20px;
+  padding: 60px;
+}
+
+.col-3 img {
+  padding: 20px;
+}
+
+.join-community .btn-flat {
+  color: black;
+  border-color: black;
+  border-radius: 2px;
+  margin-top: 60px;
+  padding: 30px 200px;
+}
