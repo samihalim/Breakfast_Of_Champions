@@ -1,11 +1,23 @@
 .avatar {
   width: 40px;
+  height: 40px;
   border-radius: 50%;
+  border: 1px #FFAC00 solid;
+  object-fit: cover;
 }
 .avatar-large {
-  width: 56px;
+  padding: 0px;
+  border: 5px #FFAC00 solid;
   border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  float: right;
+  position: relative;
+  top: -30px;
+  right: 20px;
 }
+
 .avatar-bordered {
   width: 40px;
   border-radius: 50%;
