@@ -1,14 +1,29 @@
 <div class="footer-wrapper">
   <div class="footer">
-    <div class="footer-links">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
+    <div class="footer-logo-container">
+      <%= image_tag "boc_10", class: "footer-logo" %>
+      <h6>Breakfast of Champions</h6>
+    </div>
+    <div class="footer-body-container">
+      <div class="navigate-container">
+        <h6>NAVIGATE</h6>
+        <h7> <%=link_to "Explore", posts_path, class: "navigate-text" %> </h7>
+        <h7> <%=link_to "Sign up", new_user_registration_path, class: "navigate-text" %> </h7>
+      </div>
+      <div class="footer-links-container">
+        <h6>SOCIALS</h6>
+        <div class="footer-links">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
     </div>
     <div class="footer-copyright">
-      This footer is made with <i class="fas fa-heart"></i> by Estelle and it's not done yet.
+      <h7>Breakfast of Champions@copyright2020</h7>
     </div>
   </div>
 </div>
+
