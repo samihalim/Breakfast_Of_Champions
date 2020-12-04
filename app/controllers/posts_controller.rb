@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authenticate_user!, only: [ :index, :show ]
+  skip_before_action :authenticate_user!, only: [ :index ]
 
   def index
     if params[:query].present?
       category = Category.find_by_name(params[:query])
-      @posts = category.posts
+      @pagy, @posts = pagy(category.posts.order(updated_at: :desc), items: 15)
     else
       @pagy, @posts = pagy(Post.all.order(updated_at: :desc), items: 15)
     end
@@ -48,7 +48,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to posts_path, notice: 'Post was successfully destroyed.'
+    redirect_to user_profile_path(current_user.username), notice: 'Post was successfully destroyed.'
   end
 
   private
@@ -58,7 +58,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-
     params.require(:post).permit(:title, :description, photos: [], category_ids: [])
   end
 end
