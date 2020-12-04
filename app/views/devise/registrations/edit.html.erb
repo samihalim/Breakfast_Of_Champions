@@ -2,7 +2,7 @@
   <div class="edit-user-cards">
     <div class="edit-user-form">
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
-<img class="avatar dropdown-toggle" id="edit-user-photo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" src="http://res.cloudinary.com/dfhjv0z0k/image/upload/zee2sccdgpeq61hl6xdglpup6x2m">
+<%= cl_image_tag current_user.photo.key, crop: :fill, class: "avatar-large"%>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
 <%= f.error_notification %>
 
