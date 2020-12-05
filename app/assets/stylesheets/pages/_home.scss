@@ -4,6 +4,10 @@
   padding: 60px;
 }
 
+.join-community {
+  box-sizing: content-box;
+  padding: 60px;
+}
 .container-btn {
   margin-top: 10px;
   margin-bottom: 0;
@@ -35,6 +39,8 @@
   align-content: flex-end;
 }
 
+
+
 .get-started h1 {
   padding: 30px 20px 20px 20px;
   color: white;
@@ -44,8 +50,8 @@
 
 .get-started p {
   margin-left: 30;
-  padding: 20px 20px 20px 20px;
-  font-size: 20px;
+ display: contents;
+  font-size: 30px;
   color: white;
   opacity: .9;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -74,7 +80,7 @@
 .join-community-container {
   background-color: white;
   color: #FFAC00;
-  margin: 50px 20x 2px 1px;
+
   padding: 20px;
 }
 
