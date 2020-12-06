@@ -1,36 +1,44 @@
 <div class="cards">
   <% @posts.each do |post| %>
-  <%= link_to post_path(post), class:"no-hover-link" do %>
   <div class="card">
-    <div class="post d-flex justify-content-center">
-      <% if post.photos.attached? %>
-      <% post.photos.each do |photo| %>
-        <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%=cl_image_path "#{photo.key}.jpg"%>')">
-        </div>
-      <% end %>
-      <% else %>
-       <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path post.photos.first.key %>)">
+    <%= link_to post_path(post), class:"no-hover-link" do %>
+      <div class="post d-flex justify-content-center">
+        <% if post.photos.attached? %>
+        <% post.photos.each do |photo| %>
+          <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%=cl_image_path "#{photo.key}.jpg"%>')">
+          </div>
         <% end %>
-    </div>
+        <% else %>
+         <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path post.photos.first.key %>)">
+          <% end %>
+      </div>
+    <% end %>
 
     <div class="card-infos">
       <div class="row">
         <div class="col-10">
           <br>
-          <h5><strong> <%= post.title %> </strong></h5>
-          <h6><%= post.user.username %></h6>
+          <%= link_to post_path(post), class:"no-hover-link card-link" do %>
+            <h5><strong> <%= post.title %> </strong></h5>
+          <% end %>
+          <%= link_to user_profile_path(post.user.username), class:"card-user-link a-reply" do %>
+            <h6><%= post.user.username %></h6>
+          <% end %>
           <% post.categories.each do |category| %>
           <button class="btn-info" style="opacity: 0.8;">
            <%= category.name %>
            </button>
            <% end %>
          </div>
-         <div class="col-2"> <br> <div class="icon"> <i class="fas fa-comment-alt fa-s"></i> <i class="fas fa-eye fa-s"></i> </div>
-         <div class="icon"><p>150</p><p>69</p></div></div></div>
+         <%= link_to post_path(post), class:"no-hover-link col-2" do %>
+            <br>
+            <div class="icon"> <i class="fas fa-comment-alt fa-s"></i> <i class="fas fa-eye fa-s"></i> </div>
+            <div class="icon"><p>150</p><p>69</p></div>
+         <% end %>
+         </div>
        </div>
      </div>
      <% end %>
-  <% end %>
    </div>
 
 <div class="container-index">
