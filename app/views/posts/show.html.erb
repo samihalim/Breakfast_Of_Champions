@@ -3,7 +3,7 @@
 <% content_for :meta_image, cl_image_path(@post.photos.first) %>
 
 <div class="row px-5">
-  <div class="col-9 py-5">
+  <div class="col-8 py-5">
     <div class="post d-flex justify-content-center">
       <% @post.photos.each do |photo| %>
       <%= cl_image_tag "#{photo.key}.jpg", class: "shadow-lg", id: "post-img"%>
@@ -19,7 +19,7 @@
     <% end %>
   </div>
 
-  <div class="col-3" id="post-description">
+  <div class="col-4" id="post-description">
     <div class="post-description">
       <h4><%= @post.title %></h4>
       <h5><%= @post.description %></h5>
