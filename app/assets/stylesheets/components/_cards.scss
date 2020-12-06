@@ -58,6 +58,16 @@
   border-style: none;
 }
 
+.card-inner-content {
+  position: relative;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.card-inner-content a {
+  pointer-events: all;
+}
+
 .cards {
   margin: 10px;
   padding: 1px 10px 10px 10px;
@@ -93,6 +103,14 @@
 
 .no-hover-link {
   color: black;
+}
+
+.card-link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .no-hover-link:hover {
