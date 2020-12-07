@@ -56,6 +56,23 @@
   padding: 10px;
 }
 
+.card-detail {
+  // background-size: cover;
+  // background-position: center;
+  height: 600px;
+  display: flex;
+  object-fit: scale-down;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 100%;
+  padding: 20px;
+}
+
 .card {
   border-style: none;
 }
@@ -124,4 +141,8 @@
 .icon {
   display: flex;
   justify-content: space-between;
+}
+
+.shadow-lg {
+  margin: 20px;
 }

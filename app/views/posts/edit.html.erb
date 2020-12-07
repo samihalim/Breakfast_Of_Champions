@@ -4,8 +4,8 @@
       <div class="col-md-12">
        <h1>Edit post</h1>
         <%= simple_form_for @post do |f| %>
-        <%= f.input :title %>
-        <%= f.input :description %>
+        <%= f.input :title, input_html: { maxlength: 50 }%>
+        <%= f.input :description, input_html: { maxlength: 500 } %>
         <%= f.input :photos, as: :file, input_html: {class: 'd-none hidden', multiple: true, accept: ".pdf", id: 'photo-input'}, label_html: { class: 'upload-photo'}, label: '✉︎ Upload a PDF file (1 page only)' %>
         <embed src="" id="photo-preview" type="">
         <%= f.input :category_ids, collection: Category.all, as: :check_boxes, label_method: :name, input_html: { class: "tag-selector" }, item_wrapper_class: 'tag-item' %>

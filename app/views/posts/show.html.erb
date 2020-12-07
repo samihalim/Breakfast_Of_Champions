@@ -6,7 +6,7 @@
   <div class="col-8 py-5">
     <div class="post d-flex justify-content-center">
       <% @post.photos.each do |photo| %>
-      <%= cl_image_tag "#{photo.key}.jpg", class: "shadow-lg", id: "post-img"%>
+      <%= cl_image_tag "#{photo.key}.jpg", class: "card-detail", id: "post-img"%>
       <% end %>
     </div>
     <% if @post.user == current_user %>
