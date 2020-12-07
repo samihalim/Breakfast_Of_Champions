@@ -7,9 +7,7 @@
       <div class="post d-flex justify-content-center">
         <% if post.photos.attached? %>
         <% post.photos.each do |photo| %>
-          <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),
-          url('<%=cl_image_path "#{photo.key}.jpg"%>')">
-          </div>
+          <%=cl_image_tag "#{photo.key}.jpg", class: "card-picture"%>
         <% end %>
         <% else %>
           <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path post.photos.first.key %>)">
