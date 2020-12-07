@@ -29,10 +29,13 @@
               <div>
                 <%= link_to edit_user_registration_path(current_user) do %>
                   <i class="fas fa-user-edit icon-user-edit"></i>
+                  <br>
                 <% end %>
               </div>
             <% end %>
+
           </div>
+
           <div class="about-info d-flex flex-column">
             <div>
               <p class="bold-text">Biography</p>
@@ -66,7 +69,7 @@
           <% @user.posts.each do |post| %>
           <%= link_to post_path(post), class:"no-hover-link" do %>
           <div class="card">
-            <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path post.photos.first.key %>)">
+            <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path "#{post.photos.first.key}.jpg" %>)">
             </div>
 
             <div class="card-infos">

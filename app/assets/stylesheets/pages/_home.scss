@@ -6,6 +6,10 @@
   padding: 60px;
 }
 
+.join-community {
+  box-sizing: content-box;
+  padding: 60px;
+}
 .container-btn {
   margin-top: 70px;
   position: relative;
@@ -41,8 +45,9 @@
   align-content: flex-end;
 }
 
-.get-started-flex h1 {
-  font-size: 120px;
+
+.get-started h1 {
+
   padding: 30px 20px 20px 20px;
 }
 
@@ -52,9 +57,13 @@
   font-weight: bold;
 }
 
+
 .get-started p {
   margin-left: 30;
-  font-size: 20px;
+
+ display: contents;
+  font-size: 30px;
+
   color: white;
   opacity: .9;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -67,9 +76,13 @@
 }
 
 .get-started .btn-flat {
-  color: white;
-  border-color: white;
+
   border-radius: 2px;
+
+  padding: 30px 200px;
+  background-color: white;
+  color: #FFAC00;
+
 }
 
 .image-get-started {
@@ -83,20 +96,10 @@
 .join-community-container {
   background-color: white;
   color: #FFAC00;
-  padding: 60px 60px 0px 60px;
-}
 
-.join-community-container h1 {
-  margin: 30;
-  padding: 100px 20px 20px 20px;
-  color: black;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 36px;
-  font-weight: bold;
-}
 
-.col-3 p {
-  padding: 1px 15px 1px 1px;
+  padding: 20px;
+
 }
 
 .col-3 img {
@@ -104,10 +107,14 @@
 }
 
 .join-community .btn-flat {
-  color: black;
-  border-color: black;
+
   border-radius: 2px;
-  padding: 24px 80px;
-  margin: 50px 10px 50px 10px;
-  font-size: 18px;
+
+
+  padding: 30px 200px;
+  margin: 50px;
+  background-color: #FFAC00;
+  color: white;
+
 }
+
