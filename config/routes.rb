@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'upvote/create'
+  get 'upvote/destroy'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, controllers: { registrations: 'users/registrations' }
   get 'users/:id', to: 'users#show', as: :user_profile
