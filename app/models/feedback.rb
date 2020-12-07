@@ -3,4 +3,5 @@ class Feedback < ApplicationRecord
   belongs_to :post
 
   has_many :feedbacks, dependent: :destroy
+
 end
