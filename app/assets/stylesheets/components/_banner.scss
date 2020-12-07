@@ -5,13 +5,12 @@
   padding: 60px;
 }
 
-.banner h1 {
+.banner-container h1 {
   margin: 30;
   padding: 100px 20px 20px 20px;
   color: black;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 34px;
 }
 
 .banner p {
@@ -23,18 +22,22 @@
 }
 
 .banner a {
-  padding: 24px;
-  margin: 10px 100px 100px 100px;
+  font-size: 18px;
+  padding: 24px 80px;
+  margin: 10px 50px 100px 50px;
 }
 
 .banner .btn-flat {
   color: black;
   border-color: black;
   border-radius: 2px;
+  float: center;
+  text-align: center;
 }
 
 .image-banner {
   float: right;
+  display: block;
   object-fit: contain;
 }
 
