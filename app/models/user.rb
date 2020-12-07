@@ -10,6 +10,7 @@ class User < ApplicationRecord
 
   has_many :feedbacks
   has_many :posts
+  has_many :notifications, as: :recipient
 
   has_one_attached :photo
 

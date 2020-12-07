@@ -31,3 +31,6 @@
 
 en:
   hello: "Hello world"
+  notifications:
+    new_feedback:
+      message: "You have new feedback"
