@@ -29,8 +29,9 @@
 
         <li class="nav-item">
           <div id="flag-container" data-chatroom-id="<%= current_user.id %>">
-        <i class="far fa-flag fa-sm"><%= link_to "", notifications_path, class: "nav-link" %></i>
+        <%= link_to notifications_path, class: "nav-link" do %><i class="far fa-flag fa-sm"></i>
         </div>
+        <% end %>
 
         </li>
         <li class="nav-item dropdown">
