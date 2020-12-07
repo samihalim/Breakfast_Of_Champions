@@ -10,8 +10,8 @@
   box-sizing: content-box;
   padding: 60px;
 }
+
 .container-btn {
-  margin-top: 70px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -19,8 +19,8 @@
 
 .vertical-center {
   position: relative;
+  padding-top: 15px;
 }
-
 
 .get-started-container {
   display: flex;
@@ -30,91 +30,32 @@
   font-weight: medium;
 }
 
-.get-started-title h1 {
-  margin: 30;
-  padding: 100px 20px 20px 20px;
+.join-community-container h1 {
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 36px;
-  font-weight: bold;
 }
 
-.get-started-flex {
-  display: flex;
-  flex-direction: row;
-  align-content: flex-end;
-}
-
-
-.get-started h1 {
-
-  padding: 30px 20px 20px 20px;
-}
-
-.get-started h1 {
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-weight: bold;
-}
-
-
-.get-started p {
-  margin-left: 30;
-
- display: contents;
-  font-size: 30px;
-
-  color: white;
-  opacity: .9;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
-
-.get-started a {
-  padding: 24px 80px;
-  margin: 50px 10px 50px 10px;
-  font-size: 18px;
-}
-
-.get-started .btn-flat {
-
-  border-radius: 2px;
-
-  padding: 30px 200px;
-  background-color: white;
-  color: #FFAC00;
-
-}
-
-.image-get-started {
-  float: right;
-}
-
-.image-get-started:hover {
-  opacity: 0.4;
-}
-
-.join-community-container {
-  background-color: white;
-  color: #FFAC00;
-
-
+.col-3 {
   padding: 20px;
-
-}
-
-.col-3 img {
-  padding: 20px;
+  font-weight: medium;
+  color: white;
 }
 
 .join-community .btn-flat {
-
+  font-size: 18px;
   border-radius: 2px;
-
-
   padding: 30px 200px;
-  margin: 50px;
+  margin-top: 30px;
   background-color: #FFAC00;
   color: white;
-
+  border-style: 0.1px solid;
+  border-color: white;
 }
 
+#testimony {
+  color: black;
+}
+
+.col-3-testimony {
+  padding: 10px;
+}
