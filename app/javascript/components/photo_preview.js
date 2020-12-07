@@ -26,6 +26,7 @@ const displayPreview = (input) => {
 
 
   const photo = document.getElementById('photo-preview')
+  photo.classList.remove('hidden-embed-pdf');
   photo.src = URL.createObjectURL(input.files[0])
 }
 
