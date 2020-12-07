@@ -29,10 +29,11 @@
 
 .banner .btn-flat {
   border-radius: 2px;
-  background-color: #FFAC00;
+  border-style: 0.1px solid;
+  border-color: black;
+  background-color: white;
   color: black;
   font-size: 18px;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .image-banner {
