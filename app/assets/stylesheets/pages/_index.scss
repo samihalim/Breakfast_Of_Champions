@@ -4,7 +4,44 @@
 @import "new_post";
 @import "edit_user";
 
+.btn-info-post {
+  background-color: #FFAC00;
+  padding: 2px;
+  border-radius: 25px;
+  border: 1px solid #FFAC00;
+  font-size: 14px;
+  color: white;
+}
+
+.btn-info-post a {
+  text-decoration: none;
+  color: white;
+}
+
+.categories-container {
+  margin: 50px 50px 0px 50px;
+}
+
+.btn-info-categories {
+  background-color: #FFAC00;
+  margin: 10px;
+  padding: 8px;
+  border-radius: 25px;
+  border: 1px solid #FFAC00;
+  font-size: 18px;
+  color: white;
+}
+
+.btn-info-categories a{
+  text-decoration: none;
+  color: white;
+}
+
 .index-container {
+  margin: 20px;
+}
+
+.index-container h1 {
   margin: 20px;
 }
 

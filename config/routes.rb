@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :posts do
     resources :feedbacks, only: [:create, :edit, :update, :show]
   end
-
+  resources :categories, only: [:show]
   authenticate :user, ->(user) { user.admin? } do
   mount Blazer::Engine, at: "blazer"
   end
