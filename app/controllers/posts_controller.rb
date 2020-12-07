@@ -9,6 +9,7 @@ class PostsController < ApplicationController
     else
       @pagy, @posts = pagy(Post.all.order(updated_at: :desc), items: 15)
     end
+    @categories = Category.all
   end
 
   def show
@@ -32,6 +33,9 @@ class PostsController < ApplicationController
       p @post.errors.full_messages
       render :new
     end
+    UserChannel.broadcast_to(
+      @post.user, "test"
+    )
   end
 
   def update

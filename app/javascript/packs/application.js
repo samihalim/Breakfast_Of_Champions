@@ -30,9 +30,11 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { previewImageOnFileSelect } from '../components/photo_preview';
 import { flashes } from '../components/flashes'
+import {initChatroomCable} from '../channels/user_channel'
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
+  initChatroomCable()
   flashes()
   previewImageOnFileSelect()
   // initSelect2();

@@ -1,0 +1,7 @@
+<div class="container">
+<ul>
+<% @notifications.each do |n|%>
+<li><%= render 'notification', notification: n %></li>
+<% end %>
+</ul>
+</div>

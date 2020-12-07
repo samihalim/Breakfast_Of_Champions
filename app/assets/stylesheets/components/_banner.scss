@@ -23,16 +23,17 @@
 
 .banner a {
   font-size: 18px;
-  padding: 24px 80px;
-  margin: 10px 50px 100px 50px;
+  padding: 30px 100px;
+  margin: 10px 50px 50px 100px;
 }
 
 .banner .btn-flat {
   border-radius: 2px;
-  background-color: #FFAC00;
+  border-style: 0.1px solid;
+  border-color: black;
+  background-color: white;
   color: black;
   font-size: 18px;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .image-banner {
