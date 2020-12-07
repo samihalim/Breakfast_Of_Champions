@@ -74,3 +74,5 @@ gem 'pagy', '~> 3.10'
 
 gem 'rails_admin', '~> 2.0'
 gem 'blazer'
+
+gem "noticed", "~> 1.2"
