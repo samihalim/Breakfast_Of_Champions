@@ -14,9 +14,9 @@
         <%= f.input :title %>
         <%= f.input :description %>
         <%= f.input :photos, as: :file, input_html: {class: 'd-none hidden', multiple: true, accept: ".pdf", id: 'photo-input'}, label_html: { class: 'upload-photo'}, label: '✉︎ Upload a PDF file (1 page only)' %>
-        <embed src="" id="photo-preview" type="">
+        <embed src="" id="photo-preview" type="" class="hidden-embed-pdf">
         <%= f.input :category_ids, collection: Category.all, as: :check_boxes, label_method: :name, input_html: { class: "tag-selector" }, item_wrapper_class: 'tag-item' %>
-        <%= f.button :submit, class: 'btn btn-success' %>
+        <%= f.button :submit, class: 'btn btn-info' %>
         <% end %>
       </div>
     </div>
