@@ -10,10 +10,16 @@ const initChatroomCable = () => {
         console.log('connected');
       },
       received(data) {
-        console.log(data); // called when data is broadcast in the cable
+        console.log(data)
+        flagContainer.style.background = 'red';
+
+
+         // called when data is broadcast in the cable
       },
     });
   }
 }
 
 export { initChatroomCable };
+
+
