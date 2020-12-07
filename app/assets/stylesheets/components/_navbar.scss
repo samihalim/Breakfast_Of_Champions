@@ -1,6 +1,11 @@
 .navbar {
-  height: 62px;
+  //height: 62px;
+  height: 100%;
   border: 0.1px hidden grey;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
 }
 
 #nvbr {
@@ -8,13 +13,24 @@
   box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 }
 
+.nav-avatar {
+  cursor: pointer;
+  margin-right: 20px;
+}
+
 .navbar .fa-flag {
-  padding: 10px 50px 1px 1px;
+  padding-top: 12px;
   font-size: 15px;
+  &:hover {
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.nav-link {
+  margin-right: 20px;
 }
 
 #navbarSupportedContent{
-  margin-right: 30px;
 }
 
 .navbar-lewagon {
@@ -30,7 +46,10 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 70px;
+}
 
+.navbar {
+  color: black;
 }
 
 .search-form-control {
@@ -61,7 +80,47 @@
 }
 
 .search {
-    flex-grow: 0.3;
+  flex-grow: 0.3;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .navbar {
+    height: 100%;
+  }
+  .navbar-lewagon {
+  justify-content: space-between;
+  background: white;
+  padding: 0;
+  }
+  .nav-avatar {
+  margin-right: 0;
+    order: 3;
+  }
+  .navbar-brand {
+    order: 1;
+  }
+
+  .navbar-toggler {
+    order: 4;
+    margin-right: 20px;
+    padding: 5px;
+  }
+
+  .search {
+    order: 2;
+  }
+  .navbar-collapse {
+    order: 5;
+  }
+
+  .navbar-nav li {
+    text-align: right;
+  }
+  #navbarSupportedContent{
+  margin-right: 15px;
+  color: black;
+}
 }
 
 

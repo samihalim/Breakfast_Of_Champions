@@ -1,60 +1,65 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" id="nvbr">
   <%= link_to root_path, class: "navbar-brand" do %>
-  <%= image_tag "boc_10.png" %>
+    <%= image_tag "boc_10.png" %>
   <% end %>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <!-- search bar -->
+  <form novalidate="novalidate" class="search" action="/posts" accept-charset="UTF-8" method="get">
+    <input name="utf8" type="hidden" value="&#x2713;" />
+    <div class="search-form-control form-group">
+      <input class="form-control string required" type="text" name="query" id="search_query" />
+      <button name="button" type="submit" class="btn btn-flat">
+        <p>Search for... <i class="fas fa-search"></i></p>
+      </button>
+    </div>
+  </form>
 
-<form novalidate="novalidate" class="search" action="/posts" accept-charset="UTF-8" method="get">
-  <input name="utf8" type="hidden" value="&#x2713;" />
-  <div class="search-form-control form-group">
-    <input class="form-control string required" type="text" name="query" id="search_query" />
-    <button name="button" type="submit" class="btn btn-flat">
-   <p>Search for... <i class="fas fa-search"></i></p>
-    </button>
-  </div>
-</form>
-
+  <!-- links on navbar -->
   <div class="collapse navbar-collapse" type="button" class="nav-item active" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item active" class="nav-link">
-          <%= link_to "Get Feedback", new_post_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item active">
-          <%= link_to "Explore", posts_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
+      <li class="nav-item" class="nav-link">
+        <%= link_to "Get Feedback", new_post_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Explore", posts_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
         <i class="far fa-flag fa-sm"><%= link_to "", user_profile_path(current_user.username), class: "nav-link" %></i>
-        </li>
-        <li class="nav-item dropdown">
-          <% if current_user.photo.attached? %>
-            <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <% else %>
-             <div class="avatar-initials-navbar" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= current_user.username[0..1].upcase %>
-      </div>
+      </li>
+      <% else %>
+      <li class="nav-item">
+        <%= link_to "Explore", posts_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
+      </li>
       <% end %>
-      <% end %>
-      <% if user_signed_in? %>
-      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-        <%= link_to "Profile", user_profile_path(current_user.username), class: "dropdown-item" %>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-      </div>
-    </li>
+    </ul>
+  </div>
+
+  <!-- avatar with dropdown menu -->
+  <div class="nav-item dropdown nav-avatar">
+    <% if current_user.photo.attached? %>
+    <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
     <% else %>
-    <li class="nav-item">
-      <%= link_to "Explore", posts_path, class: "nav-link" %>
-    </li>
-    <li class="nav-item">
-      <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-    </li>
-    <li class="nav-item">
-      <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
-    </li>
+    <div class="avatar-initials-navbar" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <%= current_user.username[0..1].upcase %>
+    </div>
     <% end %>
-  </ul>
-</div>
+    <% if user_signed_in? %>
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+      <%= link_to "Profile", user_profile_path(current_user.username), class: "dropdown-item" %>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+    </div>
+    <% end %>
+  </div>
+
+   <!-- toggle button on small device -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 </div>
