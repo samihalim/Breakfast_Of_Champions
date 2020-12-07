@@ -31,21 +31,31 @@
 }
 
 .join-community-container h1 {
-  color: black;
+  color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .col-3 {
   padding: 20px;
   font-weight: medium;
+  color: white;
 }
 
 .join-community .btn-flat {
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 18px;
   border-radius: 2px;
   padding: 30px 200px;
   margin-top: 30px;
-  background-color: white;
+  background-color: #FFAC00;
+  color: white;
+  border-style: 0.1px solid;
+  border-color: white;
+}
+
+#testimony {
   color: black;
+}
+
+.col-3-testimony {
+  padding: 10px;
 }
