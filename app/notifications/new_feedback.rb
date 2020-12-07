@@ -1,5 +1,6 @@
 # To deliver this notification:
 #
+#NewFeedback.with(post: Post.first).deliver_later(User.first)
 # CommentNotification.with(post: @post).deliver_later(current_user)
 # CommentNotification.with(post: @post).deliver(current_user)
 
@@ -8,7 +9,7 @@ class NewFeedback < Noticed::Base
   #
   deliver_by :database, format: :to_database
   # deliver_by :email, mailer: "UserMailer"
-  deliver_by :action_cable
+  deliver_by :action_cable, channel: 'UserChannel'
   # deliver_by :slack
   # deliver_by :custom, class: "MyDeliveryMethod"
 
@@ -16,13 +17,14 @@ class NewFeedback < Noticed::Base
     {
       type: self.class.name,
       params: params,
+
       #account: Current.account
     }
   end
 
   # Add required params
   #
-  param :post
+  param :feedback
 
   # Define helper methods to make rendering easier.
   #
@@ -31,8 +33,12 @@ class NewFeedback < Noticed::Base
   end
 
   def url
+    if params[:post].present?
     post_path(params[:post])
+  else
+    @feedback = Feedback.find(params[:feedback].id)
+    post_path(@feedback.post)
   end
 end
+end
 
-#NewFeedback.with(post: Post.first).deliver_later(User.first)
