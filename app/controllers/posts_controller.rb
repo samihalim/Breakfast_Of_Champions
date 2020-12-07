@@ -32,6 +32,9 @@ class PostsController < ApplicationController
       p @post.errors.full_messages
       render :new
     end
+    UserChannel.broadcast_to(
+      @post.user, "test"
+    )
   end
 
   def update
