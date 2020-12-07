@@ -111,6 +111,18 @@ ActiveRecord::Schema.define(version: 2020_12_07_141541) do
     t.index ["user_id"], name: "index_feedbacks_on_user_id"
   end
 
+  create_table "notifications", force: :cascade do |t|
+    t.string "recipient_type", null: false
+    t.bigint "recipient_id", null: false
+    t.string "type", null: false
+    t.jsonb "params"
+    t.datetime "read_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["read_at"], name: "index_notifications_on_read_at"
+    t.index ["recipient_type", "recipient_id"], name: "index_notifications_on_recipient_type_and_recipient_id"
+  end
+
   create_table "post_categories", force: :cascade do |t|
     t.bigint "post_id", null: false
     t.bigint "category_id", null: false
