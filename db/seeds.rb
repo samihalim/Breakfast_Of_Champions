@@ -31,7 +31,7 @@ puts "creating categories"
 
 CATEGORIES = ["Logo & identity", "App & web design", "Business & advertising", "Art & illustration", "Other" ]
 CATEGORIES.each do |category|
-  Category.create(name: category)
+  Category.create(name: category, slug: category.parameterize)
   end
 
 puts "creating post and feedback"

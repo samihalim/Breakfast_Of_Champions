@@ -9,6 +9,7 @@ class PostsController < ApplicationController
     else
       @pagy, @posts = pagy(Post.all.order(updated_at: :desc), items: 15)
     end
+    @categories = Category.all
   end
 
   def show
