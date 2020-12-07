@@ -1,7 +1,6 @@
 
 .navbar-light .navbar-nav .nav-link {
     color: black;
-    padding-right: 20px;
 }
 
 #nvbr {
@@ -22,18 +21,8 @@
   }
 }
 
-.nav-link {
-  //margin-right: 20px;
-  //padding-right: 50px;
-  background-color: red;
-}
-
-.nav-link a {
-  background-color: blue;
-}
-
-#navbarSupportedContent{
-  background-color: green;
+.navbar-active {
+  padding-right: 20px;
 }
 
 .navbar-lewagon {
@@ -43,7 +32,6 @@
   border: 0.1px hidden grey;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -85,13 +73,17 @@
   flex-grow: 0.4;
 }
 
+.navbar-collapse {
+  margin-left: auto;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .navbar-lewagon {
     padding: 0;
   }
   .nav-avatar {
-    margin-right: 0;
+    margin-right: 10px;
     order: 3;
   }
   .navbar-brand {
@@ -108,7 +100,7 @@
     margin-right: 0;
   }
 
-  .search {
+  .navbar-search {
     order: 2;
   }
   .navbar-collapse {
@@ -121,6 +113,10 @@
   #navbarSupportedContent{
     margin-right: 15px;
     color: black;
+  }
+
+  .navbar-active {
+    padding-right: 0px;
   }
 }
 
