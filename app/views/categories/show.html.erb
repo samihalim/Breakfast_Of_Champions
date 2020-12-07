@@ -1,15 +1,6 @@
 
-<div class="categories-container">
-  <h3>Browse by category:</h3>
-<% @categories.each do |category| %>
- <button class="btn-info-categories" style="opacity: 0.8;"><%= link_to category.name, category_path(category.slug) %>
-</button>
-<% end %>
-</div>
-_______________
-<br>
-
 <div class="index-container">
+  <h1> <strong><%= @category.name.upcase %> </strong></h1>
 <div class="cards">
   <% @posts.each do |post| %>
   <div class="card">
@@ -33,8 +24,8 @@ _______________
               <h6><%= post.user.username %></h6>
             <% end %>
             <% post.categories.each do |category| %>
-              <button class="btn-info-post" style="opacity: 0.8;">
-                <%= link_to category.name, category_path(category.slug) %>
+              <button class="btn-info" style="opacity: 0.8;">
+                <%= category.name %>
               </button>
             <% end %>
           </div>
@@ -58,6 +49,4 @@ _______________
   </div>
   </div>
   </div>
-
 </div>
-

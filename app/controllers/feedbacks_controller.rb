@@ -26,6 +26,8 @@ class FeedbacksController < ApplicationController
     @feedback.user = current_user
 
     if @feedback.save!
+      notification = NewFeedback.with(feedback: @feedback, post: @post)
+      notification.deliver(@feedback.post.user)
       redirect_to post_path(@post), notice: 'Feedback was successfully added.'
 
     else
