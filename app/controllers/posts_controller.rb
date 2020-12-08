@@ -4,8 +4,12 @@ class PostsController < ApplicationController
 
   def index
     if params[:query].present?
-      category = Category.find_by_name(params[:query])
-      @pagy, @posts = pagy(category.posts.order(updated_at: :desc), items: 15)
+      sql_query = " \
+        posts.title ILIKE :query \
+        OR posts.description ILIKE :query \
+        OR categories.name ILIKE :query \
+      "
+      @pagy, @posts = pagy(Post.joins(:categories).where(sql_query, query: "%#{params[:query]}%"), items: 15)
     else
       @pagy, @posts = pagy(Post.all.order(updated_at: :desc), items: 15)
     end
