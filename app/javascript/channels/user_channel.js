@@ -11,8 +11,7 @@ const initChatroomCable = () => {
       },
       received(data) {
         console.log(data)
-        flagContainer.style.background = 'red';
-
+        flagContainer.style.background = '#FFDD99';
 
          // called when data is broadcast in the cable
       },

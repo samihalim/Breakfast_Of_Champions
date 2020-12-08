@@ -27,6 +27,7 @@
   top: 0;
   width: 100%;
   position: sticky;
+  overflow: auto;
 
 
 }
@@ -79,11 +80,6 @@ text-decoration: none;
 text-decoration: none;
 color: #FFAC00;
 text-shadow: 0.5px 0.5px grey;
-}
-
-.col-4 {
-  height: 1200px;
-}
 
 .row.px-5 {
   height: 2000px;
