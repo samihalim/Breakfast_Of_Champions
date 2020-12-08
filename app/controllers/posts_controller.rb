@@ -14,6 +14,10 @@ class PostsController < ApplicationController
 
   def show
     @feedback = Feedback.new
+    if params[:notification_id].present?
+      @notification = Notification.find(params[:notification_id])
+      @notification.mark_as_read!
+    end
   end
 
   def new

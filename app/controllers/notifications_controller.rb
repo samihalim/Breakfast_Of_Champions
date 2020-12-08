@@ -4,4 +4,9 @@ class NotificationsController < ApplicationController
   def index
     @notifications = current_user.notifications.unread
   end
+
+  def destroy_notifications
+    notifications.destroy_all
+  end
+
 end
