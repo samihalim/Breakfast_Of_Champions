@@ -1,4 +1,6 @@
-
+#nav-flag{
+  margin-left: 5px;
+}
 .navbar-light .navbar-nav .nav-link {
     color: black;
 }
@@ -6,6 +8,12 @@
 #nvbr {
   border-bottom: rgba(0,0,0,0.1) solid 1px;
   box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+#flag-container {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
 }
 
 .nav-avatar {
