@@ -1,6 +1,6 @@
-.navbar {
-  height: 62px;
-  border: 0.1px hidden grey;
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
 }
 
 #nvbr {
@@ -8,20 +8,29 @@
   box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 }
 
-.navbar .fa-flag {
-  padding: 10px 50px 1px 1px;
-  font-size: 15px;
+.nav-avatar {
+  cursor: pointer;
+  margin-right: 20px;
 }
 
-#navbarSupportedContent{
-  margin-right: 30px;
+.navbar .fa-flag {
+  font-size: 15px;
+  &:hover {
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.navbar-active {
+  padding-right: 20px;
 }
 
 .navbar-lewagon {
-  justify-content: space-between;
   background: white;
   padding: 0;
-
+  height: 100%;
+  border: 0.1px hidden grey;
+  display: flex;
+  flex-direction: row;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -30,7 +39,6 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 70px;
-
 }
 
 .search-form-control {
@@ -61,7 +69,54 @@
 }
 
 .search {
-    flex-grow: 0.3;
+  flex-grow: 0.4;
+}
+
+.navbar-collapse {
+  margin-left: auto;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .navbar-lewagon {
+    padding: 0;
+  }
+  .nav-avatar {
+    margin-right: 10px;
+    order: 3;
+  }
+  .navbar-brand {
+    order: 1;
+  }
+
+  .navbar-toggler {
+    order: 4;
+    margin-right: 20px;
+    padding: 5px;
+  }
+
+  .nav-link {
+    margin-right: 0;
+  }
+
+  .navbar-search {
+    order: 2;
+  }
+  .navbar-collapse {
+    order: 5;
+  }
+
+  .navbar-nav li {
+    text-align: right;
+  }
+  #navbarSupportedContent{
+    margin-right: 15px;
+    color: black;
+  }
+
+  .navbar-active {
+    padding-right: 0px;
+  }
 }
 
 
