@@ -11,7 +11,7 @@ class PostsController < ApplicationController
       "
       @pagy, @posts = pagy(Post.joins(:categories).where(sql_query, query: "%#{params[:query]}%"), items: 15)
     else
-      @pagy, @posts = pagy(Post.all.order(updated_at: :desc), items: 15)
+      @pagy, @posts = pagy(Post.all.order(created_at: :desc), items: 15)
     end
     @categories = Category.all
   end
