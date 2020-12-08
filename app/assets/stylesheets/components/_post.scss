@@ -1,8 +1,35 @@
+.form-container {
+  border-style: 0.1px solid;
+}
+
+.form-box {
+  border: 1px solid rgba(0,0,0,0.2);
+  background: white;
+  height: auto;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container h1 {
+  color: #FFAC00;
+  font-weight: bold;
+}
+
+.form-container h3 {
+  color: #FFAC00;
+}
+
 .post {
-    width: 100%;
-    height: 75%;
-    object-fit: cover;
-    position: relative;
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+  position: relative;
 
 }
 
@@ -76,10 +103,54 @@ color: #FFAC00;
 text-shadow: 0.5px 0.5px grey;
 }
 
-.post-feedback {
-  border-top: 4px #FFAC00 dotted;
+.row.px-5 {
+  height: 2000px;
+}
+
+
+.reply-1 {
+ display: inline-flex
+}
+
+.btn.btn-info-reply {
+  border-radius: 2px;
+  padding: 10px 150px;
+  margin: 10px;
+  border-style: 0.1px solid;
+  background-color: #FFAC00;
+  color: white;
+  font-weight: medium;
+  font-size: 18px;
+}
+
+
+.vote-container {
+  display:flex;
+}
+
+#feedback-post {
+  border-bottom: .4px dotted;
   padding-top: 10px;
+  background-color: whitesmoke;
+
+}
+
+#down {
+  border: none;
+}
+
+.button_to {
   button {
-    margin-bottom: 15px;
+    border-radius: 50%;
   }
+}
+
+.edit-post-1 {
+  font-size: 20px;
+}
+
+
+.fa-comment-dots {
+  font-size: 25px;
+  color: #FFAC00;
 }
