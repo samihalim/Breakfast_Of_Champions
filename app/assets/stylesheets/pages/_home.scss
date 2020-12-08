@@ -59,3 +59,19 @@
 .col-3-testimony {
   padding: 10px;
 }
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .get-started-container {
+    display: grid;
+    grid-column: 12;
+  }
+  .col-3 {
+    display: grid;
+    grid-template-row: 1fr 1fr;
+  }
+  .join-community .btn-flat {
+    padding: 20px 80px;
+    //margin-top: 30px;
+  }
+}
