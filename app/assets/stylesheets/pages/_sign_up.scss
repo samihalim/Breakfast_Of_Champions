@@ -1,6 +1,6 @@
 .signup-container {
   background: white;
-  height: 1600px;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,7 +22,8 @@
 }
 
 .signup-logo {
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   color: white;
   font-size: 25px;
   font-weight: bold;
@@ -71,33 +72,32 @@
   .signup-cards {
     grid-template-columns: 1fr;
   }
+  .signup-logo {
+    margin-bottom: 0;
+  }
+  .signup-form {
+    width: 90%;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
 }
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
+@media (min-width: 576px) and (max-width: 768px) {
   .signup-cards {
     grid-template-columns: 1fr;
   }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .signup-cards {
-    grid-template-columns: 1fr 1fr;
+  .signup-logo {
+    margin-bottom: 0;
   }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .signup-cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .signup-cards {
-    grid-template-columns: 1fr 1fr 1fr;
+  .signup-form {
+    width: 450px;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
   }
 }
 
