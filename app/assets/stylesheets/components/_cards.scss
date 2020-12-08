@@ -116,7 +116,7 @@
 }
 
 .fa-comment-alt {
-  padding: 6px 1px 1px 1px;
+  padding: 6px 1px 1px 2px;
   font-size: 14px;
 }
 
@@ -139,6 +139,11 @@
 }
 
 .icon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-text {
   display: flex;
   justify-content: space-between;
 }
