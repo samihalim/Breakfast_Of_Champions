@@ -29,7 +29,8 @@ class NewFeedback < Noticed::Base
   # Define helper methods to make rendering easier.
   #
   def message
-    t(".message")
+    "#{t(".message")} #{Feedback.find(params[:feedback].id).post.title}}"
+
   end
 
   def url(*args, **kwargs)

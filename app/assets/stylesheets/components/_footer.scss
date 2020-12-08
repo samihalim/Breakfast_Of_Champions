@@ -67,29 +67,17 @@
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .footer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: 100%;
-    h6 {
-      font-size: 16px;
-    }
+    display: flex;
+    flex-direction: column;
   }
-  .footer-logo-container {
-    height: 40px;
-  }
-  .navigate-text {
-    padding: 0;
-    padding-right: 10px;
+  .footer-logo {
+    margin: 0;
   }
   .responsive-links {
-    margin-left: 90px;
+    margin: 0;
   }
   .copyright-text {
-    margin-left: 90px;
-  }
-  .footer-links a {
-    font-size: 18px;
+    margin: 0;
   }
 }
 
