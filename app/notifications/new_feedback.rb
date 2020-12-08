@@ -34,11 +34,10 @@ class NewFeedback < Noticed::Base
 
   def url(*args, **kwargs)
     if params[:post].present?
-    post_path(params[:post],*args, **kwargs)
-  else
-    @feedback = Feedback.find(params[:feedback].id)
-    post_path(@feedback.post,*args, **kwargs)
+      post_path(params[:post],*args, **kwargs)
+    else
+      @feedback = Feedback.find(params[:feedback].id)
+      post_path(@feedback.post,*args, **kwargs)
+    end
   end
 end
-end
-
