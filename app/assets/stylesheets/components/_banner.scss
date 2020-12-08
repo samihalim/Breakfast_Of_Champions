@@ -49,3 +49,17 @@ opacity: 0.4;
 .banner-container {
   margin: 0;
 }
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .image-banner {
+    width: 450px;
+    height: 400px;
+    float: none;
+  }
+  .banner a {
+    margin: 0;
+    margin: 10px 50px 50px 50px;
+    padding: 20px 80px;
+  }
+}

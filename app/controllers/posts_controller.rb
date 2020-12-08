@@ -22,6 +22,8 @@ class PostsController < ApplicationController
       @notification = Notification.find(params[:notification_id])
       @notification.mark_as_read!
     end
+    @post.views = @post.views + 1
+    @post.save
   end
 
   def new

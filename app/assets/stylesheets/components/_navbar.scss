@@ -1,13 +1,21 @@
-#nav-flag{
-  margin-left: 5px;
-}
 .navbar-light .navbar-nav .nav-link {
-    color: black;
+  color: black;
 }
 
 #nvbr {
   border-bottom: rgba(0,0,0,0.1) solid 1px;
   box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+.sticky {
+  z-index: 999;
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
+
+#nav-flag {
+  margin-left: 5px;
 }
 
 #flag-container {
@@ -35,7 +43,7 @@
 .navbar-lewagon {
   background: white;
   padding: 0;
-  height: 100%;
+  margin: 0;
   border: 0.1px hidden grey;
   display: flex;
   flex-direction: row;
@@ -122,6 +130,7 @@
   .navbar-nav li {
     text-align: right;
   }
+
   #navbarSupportedContent{
     margin-right: 15px;
     color: black;

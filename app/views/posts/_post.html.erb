@@ -1,11 +1,29 @@
   <div class="feedback-container <%= level == 0 ? 'top' : 'not-top' %>" style="padding-left: <%= level * 10 %>px">
 
-    <div class="d-flex">
+    <div class="reply-1">
     <p class="reply">
     <%= link_to feedback.user.username, user_profile_path(feedback.user.username), class: "a-reply"%>: <%= feedback.description %>
     </p>
-      <i class="fas fa-edit" type="button" data-toggle="collapse" data-target="#collapse<%=feedback.id%>" aria-expanded="false" aria-controls="collapseExample"></i>    </button>
+    <div class="vote-container">
+      <% vote = Vote.where(feedback: feedback, user: current_user).first %>
+
+      <%= Vote.where(feedback: feedback).count %>
+      <% if vote %>
+        <%= button_to post_feedback_vote_path(feedback.post, feedback, vote), method: :delete, remote: true do %>
+        <i class="fas fa-chevron-down"></i>
+        <% end %>
+      <% else %>
+        <%= button_to post_feedback_votes_path(feedback.post, feedback), remote: true do %>
+        <i class="fas fa-chevron-up"></i>
+        <% end %>
+      <% end %>
     </div>
+
+
+      &#160;
+      <i class="fas fa-edit" type="button" data-toggle="collapse" data-target="#collapse<%=feedback.id%>" aria-expanded="false" aria-controls="collapseExample"></i></button>
+    </div>
+
     <div class="collapse" id="collapse<%=feedback.id%>">
       <div class="card card-body">
         <p>Edit your feedback</p>
@@ -16,11 +34,14 @@
         </div>
     </div>
 
+
   <%= render partial: "posts/form", locals: { feedback_id: feedback.id } %>
+
 
   <% feedback.feedbacks.each do |feedback| %>
     <%= render partial: "posts/post", locals: { feedback: feedback, level: (level += 1) } %>
   <% end %>
+
 </div>
 
 <!--  -->
