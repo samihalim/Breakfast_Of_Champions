@@ -1,5 +1,4 @@
 <div>
-  <%= link_to notification.to_notification.message, notification.to_notification.url %>
-
+  <%= link_to notification.to_notification.message, notification.to_notification.url(notification_id: notification.id) %>
 
 </div>
