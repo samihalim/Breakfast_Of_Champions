@@ -2,21 +2,24 @@
   <div class="row justify-content-center">
     <div id="column" class="col-12">
       <div class="col-md-12 form-container">
-       <h1>How To Create a New Post</h1>
+       <h1>How To Create a New Post in 4 Easy Steps :</h1>
        <br>
-        <br>
-<%= image_tag "steps_new.svg" %>
+       <br>
+       <%= image_tag "steps_new.svg" %>
 
-<h3>Create a Post Now</h3>
-<br>
-        <%= simple_form_for @post do |f| %>
-        <%= f.input :title, input_html: { maxlength: 50 }%>
-        <%= f.input :description, input_html: { maxlength: 500 } %>
-        <%= f.input :photos, as: :file, input_html: {class: 'd-none hidden', multiple: true, accept: ".pdf", id: 'photo-input'}, label_html: { class: 'upload-photo'}, label: '✉︎ Upload a PDF file (1 page only)' %>
-        <embed src="" id="photo-preview" type="" class="hidden-embed-pdf">
+        <div class="form-box">
+       <h3>Create a Post Now</h3>
+       <br>
+       <%= simple_form_for @post do |f| %>
+       <%= f.input :title, input_html: { maxlength: 50 }%>
+       <%= f.input :description, input_html: { maxlength: 500 } %>
+       <%= f.input :photos, as: :file, input_html: {class: 'd-none hidden', multiple: true, accept: ".pdf", id: 'photo-input'}, label_html: { class: 'upload-photo'}, label: '✉︎ Upload a PDF file (1 page only)' %>
+       <embed src="" id="photo-preview" type="" class="hidden-embed-pdf">
         <%= f.input :category_ids, collection: Category.all, as: :check_boxes, label_method: :name, input_html: { class: "tag-selector" }, item_wrapper_class: 'tag-item' %>
-        <%= f.button :submit, class: 'btn btn-info' %>
+        <div class="center">
+        <%= f.button :submit, class: 'btn btn-info' %></div>
         <% end %>
+      </div>
       </div>
     </div>
   </div>
