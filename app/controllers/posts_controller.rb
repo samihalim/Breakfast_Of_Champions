@@ -17,6 +17,7 @@ class PostsController < ApplicationController
   end
 
   def show
+  #  @post = @post.includes(:feedback)
     @feedback = Feedback.new
     if params[:notification_id].present?
       @notification = Notification.find(params[:notification_id])

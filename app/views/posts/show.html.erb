@@ -37,7 +37,7 @@
         <%= f.input :description, label: false %>
         <button class="btn btn-info"><%= f.button :submit, 'Share Feedback'%></button>
         <% end %>
-        <% @post.feedbacks.where(feedback_id: nil).each do |feedback| %>
+        <% @post.feedbacks.where(feedback_id: nil).reverse.each do |feedback| %>
         <%= render partial: "posts/post", locals: { feedback: feedback, level: 0 } %>
         <% end %>
       </div>
