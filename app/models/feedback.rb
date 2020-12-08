@@ -16,8 +16,8 @@ class Feedback < ApplicationRecord
 
   def capacity_reached
     if self.post.feedbacks.count == 10
-      notification = NewFeedback.with(feedback: @feedback, post: @post)
-      notification.deliver(@feedback.post.user)
+      #notification = NewFeedback.with(feedback: @feedback, post: @post)
+      #notification.deliver(@feedback.post.user)
     end
   end
 end
