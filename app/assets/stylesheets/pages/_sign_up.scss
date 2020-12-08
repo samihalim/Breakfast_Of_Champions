@@ -6,10 +6,6 @@
   background-size: cover;
 }
 
-.signup-logo p {
-  padding: 20px 1px 1px 20px;
-}
-
 .signup-cards {
   padding-top: 20px;
   display: grid;
@@ -24,9 +20,6 @@
 .signup-logo {
   max-width: 500px;
   width: 100%;
-  color: white;
-  font-size: 25px;
-  font-weight: bold;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -36,6 +29,10 @@
   }
 }
 
+.logo-signup {
+  width: 700px;
+}
+
 .signup-form {
   width: 800px;
   border: 1px solid rgba(0,0,0,0.2);
@@ -43,6 +40,7 @@
   height: auto;
   border-radius: 10px;
   padding: 50px;
+  margin-bottom: 20px;
   box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
   .btn {
     color: white;
@@ -74,6 +72,11 @@
   }
   .signup-logo {
     margin-bottom: 0;
+    display: flex;
+
+  }
+  .logo-signup {
+    width: 400px;
   }
   .signup-form {
     width: 90%;
@@ -92,8 +95,11 @@
   .signup-logo {
     margin-bottom: 0;
   }
+  .logo-signup {
+    width: 400px;
+  }
   .signup-form {
-    width: 450px;
+    width: 90%;
     padding: 30px;
     margin-left: auto;
     margin-right: auto;
