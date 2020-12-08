@@ -91,7 +91,7 @@ text-shadow: 0.5px 0.5px grey;
  display: inline-flex
 }
 
-.btn.btn-info {
+.btn.btn-info-reply {
   border-radius: 2px;
   padding: 24px 80px;
   border-style: 0.1px solid;
@@ -101,4 +101,36 @@ text-shadow: 0.5px 0.5px grey;
   font-weight: medium;
   font-size: 18px;
 
+}
+
+
+.vote-container {
+  display:flex;
+}
+
+#feedback-post {
+  border-bottom: .4px dotted;
+  padding-top: 10px;
+  background-color: whitesmoke;
+
+}
+
+#down {
+  border: none;
+}
+
+.button_to {
+  button {
+    border-radius: 50%;
+  }
+}
+
+.edit-post-1 {
+  font-size: 20px;
+}
+
+
+.fa-comment-dots {
+  font-size: 25px;
+  color: #FFAC00;
 }
