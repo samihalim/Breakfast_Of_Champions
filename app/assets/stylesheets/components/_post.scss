@@ -24,6 +24,16 @@
 .form-container h3 {
   color: #FFAC00;
 }
+#edit-post {
+  color: #FFAC00;
+}
+.fa-trash-alt {
+  color: #FFAC00;
+}
+
+.fa-pencil-alt {
+ color: #FFAC00;
+}
 
 .post {
   width: 100%;
@@ -52,6 +62,9 @@
   position: sticky;
   overflow: auto;
 }
+.post-description h4 {
+  margin-top: 45px;
+}
 
 #delete{
   position: absolute;
@@ -66,6 +79,11 @@
 
 }
 
+.post-reply {
+    background-color: whitesmoke;
+  border-radius: 10%;
+}
+
 #post-description {
   border-left: solid #777;
   padding-right: 5px;
@@ -77,7 +95,7 @@
 }
 
 .reply {
-   background-color: #FFDD99;
+
    padding: 3px;
 }
 
@@ -124,14 +142,16 @@ text-shadow: 0.5px 0.5px grey;
 }
 
 
+
 .vote-container {
   display:flex;
 }
 
 #feedback-post {
-  border-bottom: .4px dotted;
+  border-bottom: .4px dashed;
   padding-top: 10px;
   background-color: whitesmoke;
+
 
 }
 
@@ -142,6 +162,7 @@ text-shadow: 0.5px 0.5px grey;
 .button_to {
   button {
     border-radius: 50%;
+    color: #FFAC00
   }
 }
 

@@ -40,9 +40,9 @@
         <% @post.feedbacks.where(feedback_id: nil).reverse.each do |feedback| %>
         <%= render partial: "posts/post", locals: { feedback: feedback, level: 0 } %>
         <% end %>
-      </div>
     </div>
   </div>
+      </div>
 </div>
 
 
