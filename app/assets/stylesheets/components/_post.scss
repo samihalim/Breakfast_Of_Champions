@@ -1,3 +1,7 @@
+.form-container h3 {
+  color: #FFAC00;
+}
+
 .post {
     width: 100%;
     height: 75%;
@@ -76,6 +80,18 @@ text-decoration: none;
 text-decoration: none;
 color: #FFAC00;
 text-shadow: 0.5px 0.5px grey;
+
+.row.px-5 {
+  height: 2000px;
 }
 
-
+.btn.btn-info {
+  border-radius: 2px;
+  padding: 24px 80px;
+  border-style: 0.1px solid;
+  border-color: white;
+  background-color: #FFAC00;
+  color: white;
+  font-weight: medium;
+  font-size: 18px;
+}
