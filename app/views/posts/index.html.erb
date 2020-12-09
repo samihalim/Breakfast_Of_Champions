@@ -16,9 +16,15 @@
     <div class="card-inner-content">
       <div class="post d-flex justify-content-center" >
         <% if post.photos.attached? %>
-        <% post.photos.each do |photo| %>
-          <%=cl_image_tag "#{photo.key}.jpg", class: "card-picture"%>
+        <div id="carouselExampleControls" data-interval="3500" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+        <% post.photos.each_with_index do |photo, index| %>
+            <div class="carousel-item <%= 'active' if index.zero? %>">
+          <%=cl_image_tag "#{photo.key}.jpg", class: "card-picture d-block w-100 "%>
+            </div>
         <% end %>
+          </div>
+        </div>
         <% else %>
           <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path post.photos.first.key %>)">
         <% end %>
@@ -27,9 +33,9 @@
         <div class="row">
           <div class="col-10">
             <br>
-            <h5><strong> <%= post.title %> </strong></h5>
+            <h5><strong> <%= post.title.capitalize %> </strong></h5>
             <%= link_to user_profile_path(post.user.username), class:"a-reply" do %>
-              <h6><%= post.user.username %></h6>
+              <h6><%= post.user.username.capitalize %></h6>
             <% end %>
             <% post.categories.each do |category| %>
               <button class="btn-info-post" style="opacity: 0.8;">
