@@ -9,7 +9,7 @@
     <%#= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
     <% end %>
     <!-- need to add username to sign up page to display username on the user show page -->
-    <h4 class="username-info"> <%= @user.username %> </h4>
+    <h4 class="username-info"> <%= @user.username.downcase %> </h4>
   </div>
 
   <div class="tab-container">
@@ -18,11 +18,9 @@
       <li class="active"><a class="color-tag" data-toggle="tab" href="#about">About</a></li>
       <li><a class="color-tag" data-toggle="tab" href="#posts">Posts</a></li>
     </ul>
-
     <!-- Tab content for About me -->
     <div class="tab-content">
       <div id="about" class="tab-pane fadein active">
-        <div class="d-flex flex-row">
           <div class="d-flex flex-row">
             <h4><%= @user.name %></h4>
             <% if user_signed_in? && current_user.id == @user.id %>
@@ -33,21 +31,23 @@
               <% end %>
             </div>
             <% end %>
-
           </div>
 
+        <div class="user-container">
           <div class="about-info d-flex flex-column">
-            <div>
+            <div class="user-containers">
               <p class="bold-text">Biography</p>
               <p><%= @user.biography %></p>
             </div>
-            <div>
+            <div class="user-containers">
               <p class="bold-text">Location</p>
               <div class="d-flex flex-row p-10">
                 <i class="fas fa-map-marker-alt icon-user-location"></i>
                 <p><%= @user.location %></p>
               </div>
             </div>
+
+            <div class="user-containers">
             <div>
              <p class="bold-text">Experience</p>
              <div>
@@ -66,10 +66,10 @@
               <p> <%= @user.url %></p>
             </div>
           </div>
+          </div>
         </div>
       </div>
     </div>
-
       <!-- Tab content for Posts -->
       <div id="posts" class="tab-pane fade">
         <div class="cards">
@@ -88,42 +88,42 @@
                           <% end %>
                     </div>
                   </div>
-                <% else %>
-                <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path("obt2gawnkhhze7popquskpu4gxop")%>)">
+                  <% else %>
+                    <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path("obt2gawnkhhze7popquskpu4gxop")%>)">
+                    </div>
+                  <% end %>
+                </div>
+                <%# end %>
               </div>
-                <% end %>
-            </div>
-                <div class="card-infos">
-                  <div class="row">
-                    <div class="col-10">
-                      <br>
-                      <h5><strong> <%= post.title.capitalize %> </strong></h5>
-                      <%= link_to user_profile_path(post.user.username), class:"a-reply" do %>
-                      <h6><%= post.user.username.capitalize %></h6>
-                      <% end %>
-                      <% post.categories.each do |category| %>
-                      <button class="btn-info" style="opacity: 0.8;">
-                        <%= category.name %>
-                      </button>
-                      <% end %>
-                    </div>
-                    <div class="col-2">
-                      <br>
-                      <div class="icon"> <i class="fas fa-comment-alt fa-s"></i> <i class="fas fa-eye fa-s"></i> </div>
-                      <div class="icon"><p><%=  post.feedbacks.count %> </p><p> <%= post.views %></p></div>
-                    </div>
+
+
+            <div class="card-infos">
+              <div class="row">
+                <div class="col-10">
+                  <br>
+                  <h5><strong> <%= post.title.capitalize %> </strong></h5>
+                  <%= link_to user_profile_path(post.user.username), class:"a-reply" do %>
+                  <h6><%= post.user.username.capitalize %></h6>
+                  <% end %>
+                  <% post.categories.each do |category| %>
+                  <button class="btn-info" style="opacity: 0.8;">
+                    <%= category.name %>
+                  </button>
+                  <% end %>
+                </div>
+                <div class="col-2">
+                  <br>
+                  <div class="icon"> <i class="fas fa-comment-alt fa-s"></i> <i class="fas fa-eye fa-s"></i> </div>
+                  <div class="icon"><p><%=  post.feedbacks.count %> </p><p> <%= post.views %></p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <% end %>
+           </div>
         </div>
-
-
       </div>
     </div>
   </div>
 </div>
-</div>
-

@@ -30,7 +30,7 @@
   margin: 6px;
   padding: 7px;
   border-radius: 25px;
-  border: 3px solid #FFAC00;
+  border: 1.5px solid #FFAC00;
   font-size: 16px;
 }
 
@@ -43,7 +43,7 @@
     margin: 6px;
     padding: 7px;
     border-radius: 25px;
-    border: 3px solid #FFAC00;
+    border: 1.5px solid #FFAC00;
     font-size: 16px;
 }
 
@@ -103,11 +103,11 @@
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .btn-info-categories {
-    border: 2px solid #FFAC00;
+    border: 1.5px solid #FFAC00;
     font-size: 14px;
     padding: 5px;
     &:hover {
-      border: 2px solid #FFAC00;
+      border: 1.5px solid #FFAC00;
     font-size: 14px;
     padding: 5px;
     }
