@@ -33,6 +33,8 @@
 
 .fa-pencil-alt {
  color: #FFAC00;
+ font-size: x-small;
+
 }
 
 .post {
@@ -162,7 +164,10 @@ text-shadow: 0.5px 0.5px grey;
 .button_to {
   button {
     border-radius: 50%;
-    color: #FFAC00
+    color: #FFAC00;
+    font-size: x-small;
+    border-color: #FFAC00;
+
   }
 }
 
