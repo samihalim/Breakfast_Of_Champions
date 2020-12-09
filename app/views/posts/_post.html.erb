@@ -7,10 +7,8 @@
 
     <div class="vote-container">
       <% vote = Vote.where(feedback: feedback, user: current_user).first %>
-        |
-      <%= Vote.where(feedback: feedback).count%>
-      |
       &#160;
+
       <% if vote %>
         <%= button_to post_feedback_vote_path(feedback.post, feedback, vote), method: :delete, remote: true do %>
         <i class="fas fa-chevron-down" id="down"></i>
@@ -20,6 +18,7 @@
         <i class="fas fa-chevron-up" id="down"></i>
         <% end %>
       <% end %>
+      <%= Vote.where(feedback: feedback).count%>
     </div>
 
 
@@ -41,7 +40,7 @@
 
 
   <%= render partial: "posts/form", locals: { feedback_id: feedback.id } %>
-  |
+
 
   <% feedback.feedbacks.each do |feedback| %>
     <%= render partial: "posts/post", locals: { feedback: feedback, level: (level += 1) } %>
