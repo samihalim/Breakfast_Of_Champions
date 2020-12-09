@@ -46,10 +46,11 @@
   font-size: 18px;
   border-radius: 2px;
   padding: 30px 200px;
-  background-color: #FFAC00;
-  color: black;
-  border-style: 3px solid;
-  border-color: black;
+  margin-top: 30px;
+  background-color: white;
+  color: #FFAC00;
+  border-style: 2px solid;
+  border: none;
 }
 
 #testimony {
@@ -97,5 +98,6 @@
     max-width: 100%;
     margin-bottom: 20px;
   }
+
 
 }
