@@ -1,0 +1,31 @@
+
+    <div class="col-8">
+      <div class="artwork-title">
+        <h1 class="text-center mb-4">"<%= @artwork.name.capitalize %>" by <%= @artwork.artist.user.first_name %> <%= @artwork.artist.user.last_name %></h1>
+      </div>
+      <div class="artwork-info-container">
+        <div id="carouselExampleControls" class="mx-auto w-100 carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <% if @artwork.photos.attached? %>
+            <% @artwork.photos.each_with_index do |photo, index| %>
+            <div class="d-flex justify-content-center carousel-item <%= 'active' if index == 0  %>">
+              <%= cl_image_tag photo.key, class:"artimage", crop: :fill  %>
+            </div>
+            <% end %>
+            <% end %>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" style="background-color:grey;" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" style="background-color:grey;" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <div class="artdescription">
+          <h3 id="arttitle">Description</h3>
+          <p> <%= @artwork.description %></p>
+        </div>
+      </div>
+    </div>
