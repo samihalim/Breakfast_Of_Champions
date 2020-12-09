@@ -21,15 +21,24 @@
   padding: 50px;
   box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.3);
   border: 1px hidden #E7E7E7;
-  .btn {
-    color: #e09600;
+  button {
     width: 100%;
-    &:hover {
-      background-color: white;
-    }
+  }
+  .btn {
+    color: white;
+  }
+}
+.backbtn{
+  a {
+    color: #FFAC00;
   }
 }
 
+.cancelaccount{
+  a{
+    color: #FFAC00;
+  }
+}
 #edit-user-avatar {
   height: 200px;
   width: 200px;
