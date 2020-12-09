@@ -82,3 +82,13 @@
   color: #A9A9A9;
 }
 
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .about-info {
+    margin-left: 50px;
+  }
+  .icon-user-edit {
+  padding-top: 5px;
+  font-size: 16px;
+  }
+}
