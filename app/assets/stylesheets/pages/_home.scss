@@ -28,6 +28,10 @@
   text-align: center;
   font-size: 18px;
   font-weight: medium;
+
+  p {
+    color: white;
+  }
 }
 
 .join-community-container h1 {
@@ -35,10 +39,8 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.col-3 {
-  padding: 20px;
-  font-weight: medium;
-  color: white;
+.column-testimony {
+  padding: 0;
 }
 
 .join-community .btn-flat {
@@ -46,8 +48,8 @@
   border-radius: 2px;
   padding: 30px 200px;
   margin-top: 30px;
-  background-color: #FFAC00;
-  color: white;
+  background-color: white;
+  color: #FFAC00;
   border-style: 0.1px solid;
   border-color: white;
 }
@@ -56,6 +58,46 @@
   color: black;
 }
 
-.col-3-testimony {
-  padding: 10px;
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .join-community {
+    padding: 30px;
+  }
+  .join-community-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .get-started-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .column-started {
+    max-width: 100%;
+
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .vertical-center {
+    width: 100%;
+  }
+
+  .container-btn {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .join-community .btn-flat {
+    padding: 20px 80px;
+    width: 100%;
+  }
+
+  .column-testimony {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
 }
