@@ -2,7 +2,7 @@
 .get-started {
   box-sizing: content-box;
   background-position: center;
-  padding: 85px 85px 95px 85px;
+  padding: 85px;
 }
 
 .join-community {
@@ -33,7 +33,7 @@
 }
 
 .join-community-container h1 {
-  color: white;
+  color: black;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   margin: 0px 0px 8px;
 }
@@ -47,10 +47,10 @@
   border-radius: 2px;
   padding: 30px 200px;
   margin-top: 30px;
-  background-color: white;
-  color: #FFAC00;
-  border-style: 0.1px solid;
-  border-color: white;
+  background-color: #FFAC00;
+  color: black;
+  border-style: 2px solid;
+  border-color: black;
 }
 
 #testimony {
