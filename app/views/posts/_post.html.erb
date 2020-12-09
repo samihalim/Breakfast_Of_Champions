@@ -1,32 +1,43 @@
   <div class="feedback-container <%= level == 0 ? 'top' : 'not-top' %>" id="feedback-post" style="padding-left: <%= level * 10 %>px">
 
-    <div class="reply-1">
-    <p class="reply">
-    <%= link_to feedback.user.username, user_profile_path(feedback.user.username), class: "a-reply"%>: <%= feedback.description %>
-    </p>
+    <div class="reply-space">
+      <div class="reply-1">
+        <strong>
+          <%= Vote.where(feedback: feedback).count%>
+        </strong>
+        <div class="vote-container">
+          <% vote = Vote.where(feedback: feedback, user: current_user).first %>
+          &#160;
 
-    <div class="vote-container">
-      <% vote = Vote.where(feedback: feedback, user: current_user).first %>
-      &#160;
+          <% if vote %>
+            <%= button_to post_feedback_vote_path(feedback.post, feedback, vote), method: :delete, remote: true do %>
+            <i class="fas fa-chevron-down" id="down"></i>
+            <% end %>
+          <% else %>
+            <%= button_to post_feedback_votes_path(feedback.post, feedback), remote: true do %>
+            <i class="fas fa-chevron-up" id="down"></i>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="user-link">
+          <%= link_to feedback.user.username, user_profile_path(feedback.user.username), class: "a-reply"%>
+        </div>
 
-      <% if vote %>
-        <%= button_to post_feedback_vote_path(feedback.post, feedback, vote), method: :delete, remote: true do %>
-        <i class="fas fa-chevron-down" id="down"></i>
+
+        <div class="actions">
+
+        <% if current_user.id == feedback.user_id %>
+
+          <i class="fas fa-pencil-alt edit-post-1" type="button" data-toggle="collapse" data-target="#collapse<%=feedback.id%>" aria-expanded="false" aria-controls="collapseExample"></i>
         <% end %>
-      <% else %>
-        <%= button_to post_feedback_votes_path(feedback.post, feedback), remote: true do %>
-        <i class="fas fa-chevron-up" id="down"></i>
-        <% end %>
-      <% end %>
-      <%= Vote.where(feedback: feedback).count%>
-    </div>
 
-
-      &#160;-&#160;
-      <% if current_user.id == feedback.user_id %>
-        <i class="fas fa-pencil-alt edit-post-1" type="button" data-toggle="collapse" data-target="#collapse<%=feedback.id%>" aria-expanded="false" aria-controls="collapseExample"></i></button>
-      <% end %>
+          <%= render partial: "posts/form", locals: { feedback_id: feedback.id } %>
+        </div>
     </div>
+  </div>
+      <p>
+        <%= feedback.description %>
+      </p>
 
     <div class="collapse" id="collapse<%=feedback.id%>">
       <div class="card card-body">
@@ -39,13 +50,11 @@
     </div>
 
 
-  <%= render partial: "posts/form", locals: { feedback_id: feedback.id } %>
 
 
   <% feedback.feedbacks.each do |feedback| %>
     <%= render partial: "posts/post", locals: { feedback: feedback, level: (level += 1) } %>
   <% end %>
-
 </div>
 
 <!--  -->
