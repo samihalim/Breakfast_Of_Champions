@@ -2,6 +2,9 @@
   margin-top: 50px;
   padding: 20px 50px;
   display: flex;
+  .rounded-circle {
+    border: 1px #FFAC00 solid;
+  }
 }
 
 .username-info {
@@ -17,7 +20,9 @@
   padding: 20px 50px;
 }
 
-
+.fa-linkedin{
+  padding-right: 15px;
+}
 .about-info {
   margin-left: 100px;
 }
