@@ -26,12 +26,12 @@
           <div class="d-flex flex-row">
             <h4><%= @user.name %></h4>
             <% if user_signed_in? && current_user.id == @user.id %>
-              <div>
-                <%= link_to edit_user_registration_path(current_user) do %>
-                  <i class="fas fa-user-edit icon-user-edit"></i>
-                  <br>
-                <% end %>
-              </div>
+            <div>
+              <%= link_to edit_user_registration_path(current_user) do %>
+              <i class="fas fa-user-edit icon-user-edit"></i>
+              <br>
+              <% end %>
+            </div>
             <% end %>
 
           </div>
@@ -48,20 +48,27 @@
                 <p><%= @user.location %></p>
               </div>
             </div>
+            <div>
+             <p class="bold-text">Experience</p>
              <div>
-               <p class="bold-text">Experience</p>
-               <div>
-                <% @user.experience.times do %>
-                  <i class="fas fa-star colored-star"></i>
-                <% end %>
-                <% (5 - @user.experience).times do %>
-                  <i class="fas fa-star uncolored-star"></i>
-                <% end %>
-               </div>
-             </div>
+              <% @user.experience.times do %>
+              <i class="fas fa-star colored-star"></i>
+              <% end %>
+              <% (5 - @user.experience).times do %>
+              <i class="fas fa-star uncolored-star"></i>
+              <% end %>
+            </div>
+          </div>
+          <div>
+            <p class="bold-text">LinkedIn profile</p>
+            <div class="d-flex flex-row p-10">
+              <i class="fab fa-linkedin"></i>
+              <p> <%= @user.url %></p>
+            </div>
           </div>
         </div>
       </div>
+    </div>
 
       <!-- Tab content for Posts -->
       <div id="posts" class="tab-pane fade">
@@ -109,13 +116,14 @@
                 </div>
               </div>
             </div>
-            <% end %>
           </div>
-
-
+          <% end %>
         </div>
+
+
       </div>
-     </div>
-   </div>
+    </div>
   </div>
+</div>
+</div>
 
