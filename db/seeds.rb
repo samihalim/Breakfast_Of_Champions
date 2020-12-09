@@ -20,12 +20,12 @@ Category.destroy_all
 
 puts "creating user"
 
-User.create(name: 'Sami Halim', username: 'Sami', email: 'a@a.com', password: '654321', location: "Amsterdam", biography: "looking for great oportunities in ux design", experience: 3)
-User.create(name: 'Fabian Tewes', username: 'Fab_fabian', email: 'bb@a.com', password: '654321', location: "New York", biography: "looking for great oportunities in logo design", experience: 3)
-User.create(name: 'Margaux Salzman', username: 'Margaux', email: 'm@m.com', password: '654321', location: "Amsterdam", biography: "Creative Director", experience: 5)
-User.create(name: 'Hanna Sonnenberg', username: 'Hanna', email: 'h@h.com', password: '654321', location: "Amsterdam", biography: "Developer", experience: 3)
-User.create(name: 'Estelle Hénon', username: 'Estelle', email: 'e@e.com', password: '654321', location: "Amsterdam", biography: "UX Designer", experience: 3)
-User.create(name: 'Imke van Rossum', username: 'Imke', email: 'i@i.com', password: '654321', location: "Amsterdam", biography: "Developer", experience: 3)
+User.create(name: 'Sami Halim', username: 'Sami', email: 'a@a.com', password: '654321', location: "Amsterdam", biography: "looking for great oportunities in ux design", experience: 3, url: "www.linkedin.com/in/samihalim/")
+User.create(name: 'Fabian Tewes', username: 'Fab_fabian', email: 'bb@a.com', password: '654321', location: "New York", biography: "looking for great oportunities in logo design", experience: 3, url: "www.linkedin.com/in/fabian-tewes/")
+User.create(name: 'Margaux Salzman', username: 'Margaux', email: 'm@m.com', password: '654321', location: "Amsterdam", biography: "Creative Director", experience: 5, url: "www.linkedin.com/in/margauxsalzman/")
+User.create(name: 'Hanna Sonnenberg', username: 'Hanna', email: 'h@h.com', password: '654321', location: "Amsterdam", biography: "Developer", experience: 3, url: "www.linkedin.com/in/hanna-sonnenberg-bb29801b1/")
+User.create(name: 'Estelle Hénon', username: 'Estelle', email: 'e@e.com', password: '654321', location: "Amsterdam", biography: "UX Designer", experience: 3, url: "www.linkedin.com/in/estelle-henon-b55158b0/")
+User.create(name: 'Imke van Rossum', username: 'Imke', email: 'i@i.com', password: '654321', location: "Amsterdam", biography: "Developer", experience: 3, url: "www.linkedin.com/in/imke-van-rossum-a0b93281/")
 
 puts "creating categories"
 
