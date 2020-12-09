@@ -1,8 +1,8 @@
 <div class="container">
   <h2>Notifications...</h2>
-<ul>
+<ul class="remove_bullet_points">
 <% @notifications.each do |n|%>
-<li><%= render 'notification', notification: n %></li>
+<li><%= render 'notification', notification: n%></li>
 <% end %>
 </ul>
 </div>

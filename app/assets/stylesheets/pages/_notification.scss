@@ -1,0 +1,18 @@
+.btn-ghost {
+  color: black;
+  padding: 8px 24px;
+  border-radius: 0px;
+  font-weight: lighter;
+  list-style: none;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+  color: #4A4A4A;
+}
+
+.remove_bullet_points {
+  list-style: none;
+}

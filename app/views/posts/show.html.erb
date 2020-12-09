@@ -1,13 +1,32 @@
 <% content_for :meta_title, "#{@post.title} is on #{DEFAULT_META["meta_product_name"]}" %>
 <% content_for :meta_description, @post.description %>
-<% content_for :meta_image, cl_image_path(@post.photos.first) %>
+<% photo = @post.photos.attached? ? @post.photos.first.key : "obt2gawnkhhze7popquskpu4gxop" %>
+<% content_for :meta_image, cl_image_path(photo) %>
 
 <div class="row px-5">
   <div class="col-8 py-5">
     <div class="post d-flex justify-content-center">
-      <% @post.photos.each do |photo| %>
-      <%= cl_image_tag "#{photo.key}.jpg", class: "card-detail", id: "post-img"%>
-      <% end %>
+
+
+
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <% @post.photos.each_with_index do |photo, index| %>
+              <div class="carousel-item <%= 'active' if index.zero? %>">
+                <%= cl_image_tag "#{photo.key}.jpg", class: "d-block w-100 card-detail", crop: :fill, height: 500, id: "post-img"%>
+              </div>
+          <% end %>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </div>
     <% if @post.user == current_user %>
     <%= link_to edit_post_path do %>
@@ -21,9 +40,9 @@
 
   <div class="col-4" id="post-description">
     <div class="post-description">
-      <h4><%= @post.title %></h4>
-      <h5><%= @post.description %></h5>
-        <p>Work by: <%= link_to @post.user.username,  user_profile_path(@post.user.username), class: "a-reply" %>
+      <h4><%= @post.title.capitalize %></h4>
+      <h5><%= @post.description.capitalize %></h5>
+        <p>Work by: <%= link_to @post.user.username.capitalize,  user_profile_path(@post.user.username), class: "a-reply" %>
           </p>
       <% @post.categories.each do |category| %>
       <button class="btn-info-1" style="opacity: 0.8; margin: 10px 0;">

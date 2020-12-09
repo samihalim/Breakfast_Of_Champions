@@ -70,40 +70,48 @@
       </div>
     </div>
 
-    <!-- Tab content for Posts -->
-    <div id="posts" class="tab-pane fade">
-      <div class="cards">
-        <% @user.posts.each do |post| %>
-        <div class="card">
-          <%= link_to '', post_path(post), class:"no-hover-link card-link" %>
-          <div class="card-inner-content">
-            <div class="post d-flex justify-content-center">
-              <% if post.photos.attached? %>
-              <% post.photos.each do |photo| %>
-              <%=cl_image_tag "#{photo.key}.jpg", class: "card-picture"%>
-              <% end %>
-              <% else %>
-              <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path post.photos.first.key %>)">
-                <% end %>
-              </div>
-              <div class="card-infos">
-                <div class="row">
-                  <div class="col-10">
-                    <br>
-                    <h5><strong> <%= post.title %> </strong></h5>
-                    <%= link_to user_profile_path(post.user.username), class:"a-reply" do %>
-                    <h6><%= post.user.username %></h6>
-                    <% end %>
-                    <% post.categories.each do |category| %>
-                    <button class="btn-info" style="opacity: 0.8;">
-                      <%= category.name %>
-                    </button>
-                    <% end %>
+      <!-- Tab content for Posts -->
+      <div id="posts" class="tab-pane fade">
+        <div class="cards">
+          <% @user.posts.each do |post| %>
+          <div class="card">
+            <%= link_to '', post_path(post), class:"no-hover-link card-link" %>
+            <div class="card-inner-content">
+              <div class="post d-flex justify-content-center" >
+                <% if post.photos.attached? %>
+                  <div id="carouselExampleControls" data-interval="4000" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <% post.photos.each_with_index do |photo, index| %>
+                        <div class="carousel-item <%= 'active' if index.zero? %>">
+                          <%=cl_image_tag "#{photo.key}.jpg", class: "card-picture d-block w-100 "%>
+                        </div>
+                          <% end %>
+                    </div>
                   </div>
-                  <div class="col-2">
-                    <br>
-                    <div class="icon"> <i class="fas fa-comment-alt fa-s"></i> <i class="fas fa-eye fa-s"></i> </div>
-                    <div class="icon"><p><%=  post.feedbacks.count %> </p><p> <%= post.views %></p></div>
+                <% else %>
+                <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path("obt2gawnkhhze7popquskpu4gxop")%>)">
+              </div>
+                <% end %>
+            </div>
+                <div class="card-infos">
+                  <div class="row">
+                    <div class="col-10">
+                      <br>
+                      <h5><strong> <%= post.title.capitalize %> </strong></h5>
+                      <%= link_to user_profile_path(post.user.username), class:"a-reply" do %>
+                      <h6><%= post.user.username.capitalize %></h6>
+                      <% end %>
+                      <% post.categories.each do |category| %>
+                      <button class="btn-info" style="opacity: 0.8;">
+                        <%= category.name %>
+                      </button>
+                      <% end %>
+                    </div>
+                    <div class="col-2">
+                      <br>
+                      <div class="icon"> <i class="fas fa-comment-alt fa-s"></i> <i class="fas fa-eye fa-s"></i> </div>
+                      <div class="icon"><p><%=  post.feedbacks.count %> </p><p> <%= post.views %></p></div>
+                    </div>
                   </div>
                 </div>
               </div>
