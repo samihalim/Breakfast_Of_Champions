@@ -6,6 +6,14 @@ class Post < ApplicationRecord
 
   has_many_attached :photos
 
+  validate :has_attached_image
+
   validates :title, presence: true
   validates :description, presence: true
+
+  def has_attached_image
+    unless self.photos.attached?
+      errors.add(:number_of_photos, "Needs at least one photo")
+    end
+  end
 end

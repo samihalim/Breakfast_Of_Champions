@@ -1,6 +1,7 @@
 <% content_for :meta_title, "#{@post.title} is on #{DEFAULT_META["meta_product_name"]}" %>
 <% content_for :meta_description, @post.description %>
-<% content_for :meta_image, cl_image_path(@post.photos.first) %>
+<% photo = @post.photos.attached? ? @post.photos.first.key : "obt2gawnkhhze7popquskpu4gxop" %>
+<% content_for :meta_image, cl_image_path(photo) %>
 
 <div class="row px-5">
   <div class="col-8 py-5">
