@@ -99,3 +99,15 @@
   display: flex;
   justify-content: center;
 }
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .btn-info-categories {
+    background-color: #ffffff;
+    margin: 6px;
+    border-radius: 25px;
+    border: 2px solid #FFAC00;
+    font-size: 14px;
+    padding: 5px;
+  }
+}
