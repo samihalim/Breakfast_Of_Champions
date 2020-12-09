@@ -1,3 +1,32 @@
+.bold-text {
+  font-size: 18px;
+  color: #FFAC00;
+}
+
+.user-container {
+  border: 1px solid rgba(0,0,0,0.2);
+  background-image: url('color');
+  background-opacity: 0.5;
+  height: auto;
+  width: 80%;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 20px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.user-containers {
+  overflow: hidden;
+  background: white;
+  border: 1px solid rgba(0,0,0,0.2);
+  height: auto;
+  width: 80%;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 20px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
 .user-avatar-container {
   margin-top: 50px;
   padding: 20px 50px;
@@ -15,6 +44,11 @@
 
 .tab-container {
   padding: 20px 50px;
+}
+
+.tab-container h4 {
+  padding: 20px;
+  font-size: 38px;
 }
 
 
