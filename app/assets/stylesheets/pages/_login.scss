@@ -14,26 +14,20 @@
   padding-top: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
+  margin-right: 50px;
 }
 
 .login-logo {
   width: 700px;
   color: white;
   font-size: 36px;
-  justify-content: center;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.logo-login1 {
-    margin-left: 150px;
-    margin-top: 16px;
-    width: 700px;
-}
-
 .login-form {
-  margin: 16px 0 20px auto;
+  margin: 20px 0 40px auto;
   max-width: 500px;
   width: 100%;
   border: 1px solid rgba(0,0,0,0.2);
@@ -54,11 +48,10 @@
     a{
       padding: 10px;
       color:  #FFAC00;
-      text-decoration: underline;
+      text-decoration: none;
       border-radius: 2px;
       &:hover {
-        text-decoration: none;
-        background-color: #e09600;
+        text-decoration: underline;
       }
     }
   }
