@@ -41,7 +41,7 @@ class PostsController < ApplicationController
 
     else
       p @post.errors.full_messages
-      render :new
+      render :new, alert: 'Something went wrong.'
     end
     UserChannel.broadcast_to(
       @post.user, "test"

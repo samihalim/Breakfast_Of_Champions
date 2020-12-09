@@ -4,6 +4,7 @@ class Feedback < ApplicationRecord
 
   has_many :votes, dependent: :destroy
   has_many :feedbacks, dependent: :destroy
+  has_many :notifications, dependent: :destroy
   validate :post_cannot_have_more_than_ten_feedbacks
 
   after_create :capacity_reached
