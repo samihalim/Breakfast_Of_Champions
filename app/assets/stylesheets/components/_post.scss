@@ -117,6 +117,10 @@ color: black;
 text-decoration: none;
 }
 
+.feedback-container.not-top {
+  margin-top: -10px;
+  color: grey;
+}
 
 .reply-1 .actions {
   opacity: 0;
