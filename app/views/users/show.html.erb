@@ -78,7 +78,7 @@
         <div class="cards">
           <% @user.posts.each do |post| %>
           <div class="card">
-            <%= link_to '', post_path(post), class:"no-hover-link card-link" %>
+                   <%= link_to '', post_path(post), class:"no-hover-link card-link1" %>
             <div class="card-infos">
               <div class="card-outer d-flex justify-content-center" >
                 <% if post.photos.attached? %>

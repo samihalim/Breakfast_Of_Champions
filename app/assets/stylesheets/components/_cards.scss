@@ -148,6 +148,15 @@
   bottom: 0;
 }
 
+.card-link1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+
 .no-hover-link:hover {
   text-decoration: none;
   text-opacity: 0.5;
