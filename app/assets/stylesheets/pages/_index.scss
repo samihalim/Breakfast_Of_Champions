@@ -21,6 +21,7 @@
 .categories-container {
   margin: 50px 50px 0px 50px;
 }
+
 .btn-info-categories {
   a {
   color: #FFAC00;
@@ -99,6 +100,21 @@
 .container-index {
   display: flex;
   justify-content: center;
+}
+
+.fa-comment {
+  margin: 2px;
+  padding-top: 2px;
+}
+
+.fa-eye {
+  margin-bottom: 4px;
+  padding-bottom: 4px;
+}
+
+.icon-text {
+  padding-right: 2px;
+  text-align: center;
 }
 
 // Smallest device
