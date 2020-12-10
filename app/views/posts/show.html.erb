@@ -37,8 +37,8 @@
 
   <div class="col-4" id="post-description">
     <div class="post-description">
-      <h4><%= @post.title.capitalize %></h4>
-      <h5><%= @post.description.capitalize %></h5>
+      <h4><%= @post.title %></h4>
+      <h5><%= @post.description %></h5>
         <p>Work by: <%= link_to @post.user.username.capitalize,  user_profile_path(@post.user.username), class: "a-reply" %>
           </p>
       <% @post.categories.each do |category| %>

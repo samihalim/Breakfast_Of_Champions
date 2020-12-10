@@ -33,7 +33,7 @@
         <div class="row">
           <div class="col-10">
             <br>
-            <h6><strong> <%= post.title.capitalize %> </strong></h6>
+            <h6><strong> <%= post.title %> </strong></h6>
             <%= link_to user_profile_path(post.user.username), class:"a-reply" do %>
               <h6><%= post.user.username.capitalize %></h6>
             <% end %>
