@@ -78,7 +78,7 @@
         <div class="cards">
           <% @user.posts.each do |post| %>
           <div class="card">
-            <%= link_to '', post_path(post), class:"no-hover-link card-link" %>
+                   <%= link_to '', post_path(post), class:"no-hover-link card-link1" %>
             <div class="card-infos">
               <div class="card-outer d-flex justify-content-center" >
                 <% if post.photos.attached? %>
@@ -104,7 +104,7 @@
               <div class="row">
                 <div class="col-10">
                   <br>
-                  <h5><strong> <%= post.title.capitalize %> </strong></h5>
+                  <h5><strong> <%= post.title %> </strong></h5>
                   <%= link_to user_profile_path(post.user.username), class:"a-reply" do %>
                   <h6><%= post.user.username.capitalize %></h6>
                   <% end %>
