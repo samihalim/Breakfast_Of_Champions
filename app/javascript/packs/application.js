@@ -33,7 +33,7 @@ import { flashes } from '../components/flashes';
 import {initChatroomCable} from '../channels/user_channel';
 import {stickyNavbarRoll} from '../components/sticky_navbar';
 
-import AOS from 'aos';
+import AOS from 'aos/dist/aos.js';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 import {animateButtons} from '../components/get_started_btn';
