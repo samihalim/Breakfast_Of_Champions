@@ -13,6 +13,13 @@
         </div>
       </div>
       <% end %>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= f.error_notification %>
 
@@ -57,16 +64,15 @@
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, "Update" %>
+        <button class="btn btn-info"><%= f.button :submit, "Update" %></button>
       </div>
       <% end %>
+      <br>
+      <h3>Unhappy?</h3>
 
-      <h3>Cancel my account</h3>
-
-      <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-      <%= link_to "Back", :back %>
-
+      <div class="cancelaccount"><%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></div>
+      <br>
+      <div class="backbtn"><%= link_to "Back", :back %></div>
     </div>
   </div>
 </div>
