@@ -11,6 +11,7 @@
   border: 1px solid #FFAC00;
   font-size: 14px;
   color: white;
+  margin-bottom: 10px;
 }
 
 .btn-info-post a {
@@ -21,6 +22,7 @@
 .categories-container {
   margin: 50px 50px 0px 50px;
 }
+
 .btn-info-categories {
   a {
   color: #FFAC00;
@@ -48,11 +50,12 @@
 }
 
 .index-container {
-  margin: 20px;
+  // margin: 20px;
+  margin: 50px 50px 0px 50px;
 }
 
-.index-container h1 {
-  margin: 20px;
+.index-container h2 {
+  margin-bottom: 20px;
 }
 
 .most-commented {
@@ -98,6 +101,21 @@
 .container-index {
   display: flex;
   justify-content: center;
+}
+
+.fa-comment {
+  margin: 2px;
+  padding-top: 2px;
+}
+
+.fa-eye {
+  margin-bottom: 4px;
+  padding-bottom: 4px;
+}
+
+.icon-text {
+  padding-right: 2px;
+  text-align: center;
 }
 
 // Smallest device

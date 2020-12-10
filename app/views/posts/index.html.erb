@@ -1,6 +1,6 @@
 
 <div class="categories-container">
-  <h3>Browse by category:</h3>
+  <h2>Browse by category:</h2>
 <% @categories.each do |category| %>
  <button class="btn-info-categories" style="opacity: 0.8;"><%= link_to category.name, category_path(category.slug) %>
 </button>
@@ -45,11 +45,8 @@
           </div>
           <div class="col-2">
             <br>
-
-            <div class="icon"><i class="fas fa-comment-alt fa-s"></i> <i class="fas fa-eye fa-s"></i> </div>
+            <div class="icon"><i class="fas fa-comment fa-sm"></i></i> <i class="fas fa-eye fa-sm"></i></div>
             <div class="icon-text"><p><%= post.feedbacks.count %> </p><p> <%= post.views %> </p></div>
-
-
           </div>
         </div>
       </div>
