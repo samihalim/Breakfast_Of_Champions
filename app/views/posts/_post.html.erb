@@ -1,5 +1,4 @@
   <div class="feedback-container <%= level == 0 ? 'top' : 'not-top' %>" id="feedback-post" style="padding-left: <%= level * 10 %>px">
-
     <div class="reply-space">
       <div class="reply-1">
         <strong>
@@ -22,6 +21,7 @@
         <div class="user-link">
           <%= link_to feedback.user.username, user_profile_path(feedback.user.username), class: "a-reply user-link"%>
         </div>
+
 
 
         <div class="actions">
