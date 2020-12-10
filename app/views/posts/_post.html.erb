@@ -8,7 +8,7 @@
     <div class="vote-container">
       <% vote = Vote.where(feedback: feedback, user: current_user).first %>
       &#160;
-
+      <br>
       <% if vote %>
         <%= button_to post_feedback_vote_path(feedback.post, feedback, vote), method: :delete, remote: true do %>
         <i class="fas fa-chevron-down" id="down"></i>
