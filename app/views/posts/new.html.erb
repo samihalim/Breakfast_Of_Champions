@@ -25,7 +25,7 @@
        <embed src="" id="photo-preview" type="" class="hidden-embed-pdf">
         <%= f.input :category_ids, collection: Category.all, as: :check_boxes, label_method: :name, input_html: { class: "tag-selector" }, item_wrapper_class: 'tag-item' %>
         <div class="center">
-        <%= f.button :submit, value: 'Publish Post!', class: 'btn btn-info-reply' %></div>
+        <%= f.button :submit, value: 'Publish Post!', data: {disable_with: "publishing post..."}, class: 'btn btn-info-reply' %></div>
         <% end %>
       </div>
       </div>
