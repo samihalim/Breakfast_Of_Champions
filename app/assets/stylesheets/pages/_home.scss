@@ -57,6 +57,43 @@
   color: black;
 }
 
+// animate button
+$white-button-bg: white;
+$white-button-text-color: #FFAC00;
+
+.bubbly-button-white {
+  background-color: $white-button-bg;
+  color: $white-button-text-color;
+
+  &:before {
+    background-image:
+      radial-gradient(circle, $white-button-bg 10%, transparent 10%),
+      radial-gradient(circle,  transparent 10%, $white-button-bg 10%, transparent 10%),
+      radial-gradient(circle, $white-button-bg 10%, transparent 10%),
+      radial-gradient(circle, $white-button-bg 10%, transparent 10%),
+      radial-gradient(circle,  transparent 10%, $white-button-bg 15%, transparent 10%),
+      radial-gradient(circle, $white-button-bg 10%, transparent 10%),
+      radial-gradient(circle, $white-button-bg 10%, transparent 10%),
+      radial-gradient(circle, $white-button-bg 10%, transparent 10%),
+      radial-gradient(circle, $white-button-bg 10%, transparent 10%);
+  }
+
+  &:after {
+    background-image:
+      radial-gradient(circle, $white-button-bg 10%, transparent 10%),
+      radial-gradient(circle, $white-button-bg 10%, transparent 10%),
+      radial-gradient(circle,  transparent 10%, $white-button-bg 15%, transparent 10%),
+      radial-gradient(circle, $white-button-bg 10%, transparent 10%),
+      radial-gradient(circle, $white-button-bg 10%, transparent 10%),
+      radial-gradient(circle, $white-button-bg 10%, transparent 10%),
+      radial-gradient(circle, $white-button-bg 10%, transparent 10%);
+  }
+}
+
+//
+
+
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .join-community {
