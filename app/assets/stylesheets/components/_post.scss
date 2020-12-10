@@ -96,7 +96,7 @@
   background-color: white;
 }
 
-.reply {
+.user-link {
 
    padding: 3px;
 }
@@ -115,6 +115,16 @@
 .a-reply {
 color: black;
 text-decoration: none;
+}
+
+
+.reply-1 .actions {
+  opacity: 0;
+  transition: opacity 200ms ease;
+
+}
+.feedback-container:hover .actions {
+  opacity: 1;
 }
 
 .a-reply:hover {
@@ -150,11 +160,11 @@ text-shadow: 0.5px 0.5px grey;
 }
 
 #feedback-post {
-  border-bottom: .4px dashed;
   padding-top: 10px;
-  background-color: whitesmoke;
+}
 
-
+.user-link{
+  color: #3d4849;;
 }
 
 #down {
@@ -167,7 +177,11 @@ text-shadow: 0.5px 0.5px grey;
     color: #FFAC00;
     font-size: x-small;
     border-color: #FFAC00;
-
+    width: 25px;
+    height: 25px;
+    &:focus {
+      outline: none;
+    }
   }
 }
 

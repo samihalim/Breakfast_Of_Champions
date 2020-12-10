@@ -6,5 +6,4 @@ class NotificationsController < ApplicationController
     @notifications = current_user.notifications.newest_first.unread
 
   end
-
 end
