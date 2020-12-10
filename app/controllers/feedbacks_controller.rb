@@ -5,7 +5,6 @@ class FeedbacksController < ApplicationController
   def index
   end
 
-
   def show
     @feedbacks = Feedback.all
   end
@@ -44,7 +43,6 @@ class FeedbacksController < ApplicationController
     end
   end
 
-
   private
 
   def set_feedback
@@ -54,5 +52,4 @@ class FeedbacksController < ApplicationController
   def feedback_params
     params.require(:feedback).permit(:post_id, :description, :feedback_id,)
   end
-
 end
