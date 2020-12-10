@@ -51,11 +51,14 @@
       <div class="post-feedback">
         <%= simple_form_for([@post, @feedback], remote: true) do |f| %>
         <%= f.input :description, label: false %>
-        <button class="btn btn-info" style="margin-bottom: 35px;"><%= f.button :submit, 'Share Feedback'%></button>
+        <div class="btn-container">
+        <button class="btn btn-info-reply" style="margin-bottom: 35px;"><%= f.button :submit, 'Share Feedback'%></button>
+        </div>
         <% end %>
         <% @post.feedbacks.where(feedback_id: nil).reverse.each do |feedback| %>
         <%= render partial: "posts/post", locals: { feedback: feedback, level: 0 } %>
         <% end %>
+
     </div>
   </div>
       </div>

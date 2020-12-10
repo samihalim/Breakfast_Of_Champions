@@ -2,6 +2,12 @@
   border-style: 0.1px solid;
 }
 
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .form-box {
   border: 1px solid rgba(0,0,0,0.2);
   background: white;
@@ -81,11 +87,14 @@
 
 }
 
+.post-reply {
+  background-color: whitesmoke;
+  border-radius: 10%;
+}
+
 
 #post-description {
-  border-left: solid #777;
   padding-right: 5px;
-
 }
 
 .top > .d-flex > p {
@@ -146,7 +155,7 @@ text-shadow: 0.5px 0.5px grey;
 
 .btn.btn-info-reply {
   border-radius: 2px;
-  padding: 10px 150px;
+  padding: 4px 70px;
   margin: 10px;
   border-style: 0.1px solid;
   background-color: #FFAC00;
@@ -155,7 +164,9 @@ text-shadow: 0.5px 0.5px grey;
   font-size: 18px;
 }
 
-
+.btn.btn-info-reply input {
+  color: white;
+}
 
 .vote-container {
   display:flex;
@@ -193,7 +204,7 @@ text-shadow: 0.5px 0.5px grey;
 
 
 .fa-comment-dots {
-  font-size: 25px;
+  font-size: 20px;
   color: #FFAC00;
   background: white;
   border-style: 0px;
