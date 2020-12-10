@@ -32,6 +32,8 @@ import { previewImageOnFileSelect } from '../components/photo_preview';
 import { flashes } from '../components/flashes';
 import {initChatroomCable} from '../channels/user_channel';
 import {stickyNavbarRoll} from '../components/sticky_navbar';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -40,6 +42,7 @@ document.addEventListener('turbolinks:load', () => {
   previewImageOnFileSelect()
   stickyNavbarRoll()
   // initSelect2();
+  AOS.init();
 });
 
 
