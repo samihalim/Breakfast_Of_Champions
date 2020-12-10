@@ -3,6 +3,7 @@ class Post < ApplicationRecord
   has_many :feedbacks, dependent: :destroy
   has_many :post_categories, dependent: :destroy
   has_many :categories, through: :post_categories
+  #has_many :notifications, through: :feedbacks, dependent: :destroy
 
   has_many_attached :photos
 
