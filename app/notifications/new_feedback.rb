@@ -17,7 +17,6 @@ class NewFeedback < Noticed::Base
     {
       type: self.class.name,
       params: params,
-
       #account: Current.account
     }
   end
@@ -30,7 +29,6 @@ class NewFeedback < Noticed::Base
   #
   def message
     "#{t(".message")} #{Feedback.find(params[:feedback].id).post.title.capitalize}"
-
   end
 
   def url(*args, **kwargs)

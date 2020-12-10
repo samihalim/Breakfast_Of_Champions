@@ -1,6 +1,7 @@
   <div class="feedback-container <%= level == 0 ? 'top' : 'not-top' %>" id="feedback-post" style="padding-left: <%= level * 10 %>px">
-    <div class="reply-space">
-      <div class="reply-1">
+      <div class="space" style="margin-bottom: 10px;"></div>
+    <div class="reply-space" style="margin-top: -25px;">
+      <div class="reply-1" >
         <strong>
           <%= Vote.where(feedback: feedback).count%>
         </strong>
@@ -19,10 +20,10 @@
           <% end %>
         </div>
         <div class="user-link">
-          <%= link_to feedback.user.username, user_profile_path(feedback.user.username), class: "a-reply user-link"%>
+          -<%= link_to feedback.user.username, user_profile_path(feedback.user.username), class: "a-reply user-link",
+    style: "font-size: 15px";
+%>
         </div>
-
-
 
         <div class="actions">
 
@@ -30,12 +31,11 @@
 
           <i class="fas fa-pencil-alt edit-post-1" type="button" data-toggle="collapse" data-target="#collapse<%=feedback.id%>" aria-expanded="false" aria-controls="collapseExample"></i>
         <% end %>
-
-          <%= render partial: "posts/form", locals: { feedback_id: feedback.id } %>
+          <%= render partial: "posts/form", locals: { feedback_id: feedback.id }%>
         </div>
     </div>
   </div>
-      <p>
+      <p style="font-size: 16px; border-bottom: dotted 1px;">
         <%= feedback.description %>
       </p>
 
