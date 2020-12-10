@@ -26,8 +26,9 @@
             <% if user_signed_in? && current_user.id == @user.id %>
             <div>
               <%= link_to edit_user_registration_path(current_user) do %>
+ <br>
               <i class="fas fa-user-edit icon-user-edit"></i>
-              <br>
+
               <% end %>
             </div>
             <% end %>
@@ -59,6 +60,8 @@
               <% end %>
             </div>
           </div>
+          </div>
+          <div class="user-containers">
           <div>
             <p class="bold-text">LinkedIn profile</p>
             <div class="d-flex flex-row p-10">
