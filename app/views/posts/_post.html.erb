@@ -40,7 +40,7 @@
             </button>
             <!-- <i class="fas fa-pencil-alt edit-post-1" type="button" data-toggle="collapse" data-target="#collapse<%=feedback.id%>" aria-expanded="false" aria-controls="collapseExample"></i> -->
             <% end %>
-            <%= render partial: "posts/form", locals: { feedback_id: feedback.id }%>
+
           </div>
         </div>
       </div>
@@ -49,7 +49,9 @@
           <%= feedback.description %>
         </p>
       </div>
+       <%= render partial: "posts/form", locals: { feedback_id: feedback.id }%>
     </div>
+
     <div class="collapse" id="collapse<%=feedback.id%>">
       <div class="card card-body">
         <p>Edit your feedback</p>
