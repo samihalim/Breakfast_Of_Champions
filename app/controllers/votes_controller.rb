@@ -7,7 +7,7 @@ class VotesController < ApplicationController
 
     if @vote.save
       redirect_to post_path(@feedback.post)
-      flash[:notice] = "Succesfully added an upvote"
+      flash[:notice] = "Upvoted"
     else
       redirect_to post_path(@feedback.post)
       flash[:alert] = "Something went wrong, please try again"
@@ -20,7 +20,7 @@ class VotesController < ApplicationController
 
     if @vote.destroy
       redirect_to post_path(@feedback.post)
-      flash[:notice] = "Succesfully added a downvote"
+      flash[:notice] = "Downvoted"
     else
       redirect_to post_path(@feedback.post)
       flash[:alert] = "Something went wrong, please try again"
