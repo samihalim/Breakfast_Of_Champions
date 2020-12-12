@@ -51,6 +51,10 @@
     <% if user_signed_in? %>
       <% if current_user.photo.attached? %>
       <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+        <%= link_to "Dashboard", user_profile_path(current_user.username), class: "dropdown-item" %>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+      </div>
       <% else %>
       <div class="avatar-initials-navbar" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <%= current_user.username[0..1].upcase %>
