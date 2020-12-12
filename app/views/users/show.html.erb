@@ -15,18 +15,19 @@
   <div class="tab-container">
     <!-- Tab links -->
     <ul class="nav nav-tabs">
-      <li class="active"><a class="color-tag" data-toggle="tab" href="#about">About</a></li>
-      <li><a class="color-tag" data-toggle="tab" href="#posts">Posts</a></li>
+      <li class="active" ><a class="color-tag" data-toggle="tab" href="#posts">Posts</a></li>
+      <li ><a class="color-tag" data-toggle="tab" href="#about_me">About me</a></li>
     </ul>
+
     <!-- Tab content for About me -->
     <div class="tab-content">
-      <div id="about" class="tab-pane fadein active">
+      <div id="about_me" class="tab-pane">
           <div class="d-flex flex-row">
             <h4><%= @user.name %></h4>
             <% if user_signed_in? && current_user.id == @user.id %>
             <div>
               <%= link_to edit_user_registration_path(current_user) do %>
- <br>
+               <br>
               <i class="fas fa-user-edit icon-user-edit"></i>
 
               <% end %>
@@ -74,7 +75,7 @@
       </div>
     </div>
       <!-- Tab content for Posts -->
-      <div id="posts" class="tab-pane fade">
+      <div id="posts" class="tab-pane fadein active">
         <div class="cards">
           <% @user.posts.each do |post| %>
           <div class="card">
@@ -126,6 +127,4 @@
            </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+
